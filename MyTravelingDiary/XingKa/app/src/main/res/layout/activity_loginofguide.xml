@@ -1,0 +1,112 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_login"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <!-- 头像&Logo显示 -->
+    <RelativeLayout
+        android:id="@+id/avatar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp">
+
+        <RelativeLayout
+            android:layout_width="99dp"
+            android:layout_height="99dp"
+            android:layout_centerInParent="true"
+            android:background="@mipmap/login_avatar_bg">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                xmlns:fresco="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/sdv_avatar"
+                android:layout_centerInParent="true"
+                android:layout_width="92dp"
+                android:layout_height="92dp"
+                fresco:placeholderImage="@mipmap/login_logo"
+                fresco:roundAsCircle="true"
+                fresco:roundWithOverlayColor="@null"
+                fresco:roundingBorderWidth="0dp"
+                fresco:roundingBorderColor="@color/white" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/xk_slogan_white"
+        android:layout_marginTop="15dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/guide_btn"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginTop="220dp"
+            android:layout_marginBottom="25dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:text="登录 / 注册"
+            android:textSize="18sp"
+            android:textColor="#fff"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="其他登录方式"
+            android:textSize="16sp"
+            android:layout_centerHorizontal="true"
+            android:textColor="#fff" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom|center_horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/splash_qq"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:src="@mipmap/share_qq_white" />
+
+        <ImageView
+            android:id="@+id/splash_wechat"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/share_wechat"
+            android:layout_toLeftOf="@id/splash_qq"/>
+
+        <ImageView
+            android:id="@+id/splash_webo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/share_qq"
+            android:layout_toRightOf="@id/splash_qq"/>
+
+    </RelativeLayout>
+  </LinearLayout>
+</LinearLayout>

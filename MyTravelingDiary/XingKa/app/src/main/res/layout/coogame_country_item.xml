@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/country_catalog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/common_bg"
+        android:gravity="center_vertical"
+        android:paddingBottom="2dip"
+        android:paddingLeft="10dip"
+        android:paddingTop="2dip"
+        android:textColor="@color/input_text_color" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dip" >
+
+        <TextView
+            android:id="@+id/country_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dip"
+            android:singleLine="true"
+            android:gravity="center_vertical"
+            android:textColor="@color/input_text_color"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/country_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dip"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="@color/toolbar_text_color"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+</LinearLayout>

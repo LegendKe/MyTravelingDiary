@@ -1,0 +1,246 @@
+<resources>
+    <!-- Common-公共 -->
+    <string name="app_name">行咖</string>
+
+    <string name="module_caption">图说</string>
+    <string name="module_trackway">旅拼</string>
+    <string name="module_piazza">广场</string>
+    <string name="module_message">消息</string>
+    <string name="module_talking">咖聊</string>
+    <string name="module_mine">我的</string>
+
+    <string name="common_network_error">音信全无？嗯，可能需要检查一下网络哟</string>
+
+    <string name="post_mood">心情</string>
+    <string name="take_photo">拍照</string>
+
+    <string name="null_phone">手机号为空</string>
+    <string name="null_password">密码为空</string>
+    <string name="null_verification">验证码为空</string>
+    <string name="common_no_item">没有记录</string>
+
+    <!-- Register-注册 -->
+    <string name="register_please_input_phone">对不起,请输入您的手机号码</string>
+    <string name="register_please_input_phone_hint">请输入手机号码</string>
+    <string name="register_please_input_right_phone">对不起,您的手机号码输入无效,请重新输入</string>
+    <string name="register_please_input_password">对不起,请设置您的登录密码</string>
+    <string name="register_please_input_repassword">对不起,请确认您的登录密码</string>
+    <string name="register_please_input_password_hint">请设置您的6-16位登录密码</string>
+    <string name="register_please_input_repassword_hint">请再次确认您的登录密码</string>
+    <string name="register_please_input_invitation_code">对不起,请输入您的邀请码</string>
+    <string name="register_please_input_invitation_code_hint">请输入邀请码</string>
+    <string name="register_input_verify_code">对不起,请输入验证码</string>
+    <string name="register_input_verify_code_hint">请输入验证码</string>
+    <string name="register_verify_code_wrong">对不起,请输入正确的验证码</string>
+    <string name="register_password_tip">请输入6-16位密码</string>
+    <string name="register_invitation_code_tip">对不起,请输入正确的邀请码</string>
+    <string name="register_title">用户注册</string>
+    <string name="register_bottom_agree">点击注册即同意行咖的</string>
+    <string name="register_bottom_agreement">《用户许可协议》</string>
+    <string name="get_verify_code">获取验证码</string>
+    <string name="register_get_verify_code">立即获取</string>
+    <string name="receive_msg">&lt;font color=#ffffff>%s&lt;/font> 秒可重发</string>
+    <string name="count_down_msg">%ss | 跳过</string>
+    <string name="resend_identify_code">重新获取</string>
+    <string name="please_input_repassword">对不起,请再次输入您的新密码</string>
+    <string name="please_input_equal">对不起,您输入的密码不一致,请重新输入!</string>
+    <string name="please_input_repassword_hint">请确认新密码</string>
+    <string name="please_input_new_password">对不起,请输入您的新密码</string>
+    <string name="please_input_new_password_hint">请设置新的登录密码</string>
+    <string name="please_input_old_password">对不起,请输入您的当前密码</string>
+    <string name="please_input_old_password_hint">请输入当前账号密码</string>
+    <string name="please_input_login_password">请输入当前账号密码</string>
+    <string name="please_input_new_mobile">请输入新手机号码</string>
+    <string name="please_input_code_from_mobile">请输入验证码</string>
+    <string name="please_input_account">请输入行咖账号</string>
+    <string name="please_input_new_task">请输入说说内容</string>
+
+    <!-- Login-登录 -->
+    <string name="login_input_account">对不起,请输入您的手机号码</string>
+    <string name="login_input_account_hint">请输入手机号</string>
+    <string name="login_input_password">对不起,请输入您的登录密码</string>
+    <string name="login_input_password_hint">请输入登录密码</string>
+    <string name="login_password_error">对不起,您输入的账号或密码不正确,请重新输入</string>
+    <string name="login">登录</string>
+    <string name="sure">确定</string>
+    <string name="cancel">取消</string>
+    <string name="register">注册</string>
+    <string name="complete">完成</string>
+    <string name="phone">手机号</string>
+    <string name="verification">验证码</string>
+    <string name="password">密码</string>
+    <string name="password_input_error">密码输入有误</string>
+    <string name="login_login">立即登录</string>
+    <string name="forget_password">忘记密码?</string>
+    <string name="login_title">用户登录</string>
+    <string name="account_bind">绑定账号</string>
+    <string name="bind">立即绑定</string>
+    <string name="login_exit">退出登录</string>
+    <string name="login_others_login">其他登录方式</string>
+    <string name="user_registration_protocol">用户注册协议</string>
+    <string name="perfect_input_nickname">请输入您的昵称</string>
+    <string name="perfect_select_your_sex">请选择您的性别</string>
+
+    <!-- Caption-图说 -->
+    <string name="caption_content_surplus_words">还能输入%s字</string>
+    <string name="edittext_content_count">%1$d/%2$d</string>
+    <string name="caption_only_visible">仅自己可见</string>
+    <string name="caption_input_friend_name">输入好友名@他</string>
+    <string name="caption_publish">发布图说</string>
+    <string name="publish">发布</string>
+    <string name="caption_immediately_publish">立即发布</string>
+    <string name="caption_input_brand_name">搜索品牌名称</string>
+    <string name="caption_brand_letter_A_Z">品牌A-Z</string>
+    <string name="caption_crop_image">裁剪图片</string>
+    <string name="caption_more_comments">TA的评论</string>
+    <string name="caption_update_comments">TA的评论</string>
+    <string name="caption_add_follow">+  关注</string>
+    <string name="error_network">加载失败,请检查网络连接！</string>
+    <string name="error_key">key验证无效！</string>
+    <string name="error_other">未知错误，请稍后重试!错误码为</string>
+    <string name="no_result">对不起，没有搜索到相关数据！</string>
+    <string name="province">省</string>
+    <string name="city">市</string>
+    <string name="district">区/县</string>
+    <string name="title_activity_center">CenterActivity</string>
+    <string name="title_activity_start">StartActivity</string>
+    <string name="title_activity_lin_map">LinMapActivity</string>
+    <string name="title_activity_poly_line">PolyLineActivity</string>
+    <string name="title_activity_load">LoadActivity</string>
+    <string name="title_activity_poi_address">PoiAddressActivity</string>
+    <string name="delete">删除</string>
+    <string name="deleted_a_photo">删除了一张图片</string>
+    <string name="confirm_to_delete">确认删除？</string>
+    <string name="yes">确定</string>
+    <string name="undo">撤消</string>
+    <string name="image_index">%1$d/%2$d</string>
+
+    <!-- Mine-我的 -->
+    <string name="app_onloading">大咖息怒，跪着干脆面，为你加载中……</string>
+    <string name="mime_feedback">请在此输入您的意见，以便我们更好到服务大家...</string>
+    <string name="mime_change_password">修改密码</string>
+    <string name="mime_change_phone">更换手机</string>
+    <string name="mime_user_agreement">《行咖用户许可协议》</string>
+    <string name="mime_user_agreement_btn">同意用户协议</string>
+    <string name="mine_xingka_number">行咖号: </string>
+    <string name="mine_complete_btn">完成</string>
+    <string name="mine_friend_remark">备注名</string>
+    <string name="mine_editdata">编辑资料</string>
+    <string name="mine_feedback_title">意见反馈</string>
+    <string name="mine_feedback_default">嗨，我是咖咖。常言说，听君一席话，胜读十年书。
+        所以使用过程中有任何意见或者不便，都可以随时来找我吐槽哦，咖咖我会一直在线哟</string>
+    <string name="mine_notification_settings_title">通知设置</string>
+    <string name="mine_recommend">分享到：</string>
+    <string name="mine_security_level">账号安全等级</string>
+    <string name="account_security">账号安全</string>
+    <string name="mine_bind">绑定</string>
+    <string name="friend_remark">备注:</string>
+    <string name="mine_account_security">账号安全</string>
+    <string name="mine_recommend_tips">(将行咖推荐给好友)</string>
+    <string name="mine_choose_label">选择您的标签</string>
+    <string name="mine_setting">设置</string>
+    <string name="man">男</string>
+    <string name="woman">女</string>
+    <string name="mytalk">我的说说</string>
+    <string name="mynick">我的昵称</string>
+    <string name="attention_friend">关注TA</string>
+    <string name="report_friend">举报</string>
+    <string name="friend">好友</string>
+    <string name="scanresult">扫描结果</string>
+    <string name="mine_choose_city">选择城市</string>
+    <string name="mine_new_friend">新的好友</string>
+    <string name="mine_maybe_know">可能认识的人</string>
+    <string name="mine_invite_friends">邀请好友</string>
+    <string name="mine_addressee">收件人：</string>
+    <!-- <string name="mine_send_message">天地之间的山河湖海，都想和你一起去走走，看看。因为有你，旅途从未感到孤独。【行咖】一款有温度的APP，点击(http://www.xingka.cc)即可邂逅一段在路上的时光!</string> -->
+    <string name="mine_send_message">这里不仅有引擎的轰鸣，还有诗和远方。【行咖】一款车友专用的社交APP，点击(http://api.xingka.cc/share/share.html)即可邂逅一段在路上的时光! </string>
+    <string name="cancel_follow"> 取消关注</string>
+    <!-- PhotoPicker 照片选择 -->
+    <string name="photopicker_images">图片</string>
+    <string name="photopicker_delete">删除</string>
+    <string name="photopicker_done">完成</string>
+    <string name="photopicker_done_with_count">完成(%1$d/%2$d)</string>
+    <string name="photopicker_image_index">%1$d/%2$d</string>
+    <string name="photopicker_undo">撤消</string>
+    <string name="photopicker_deleted_a_photo">删除了一张图片</string>
+    <string name="photopicker_confirm_to_delete">确认删除？</string>
+    <string name="photopicker_yes">确定</string>
+    <string name="photopicker_cancel">取消</string>
+    <string name="photopicker_all_image">所有图片</string>
+    <string name="photopicker_over_max_count_tips">您最多可以选择%1$d张图片</string>
+
+    <string name="progressLayoutErrorButton">Try Again</string>
+    <string name="progressLayoutEmptyTitlePlaceholder">Nothing Here</string>
+    <string name="progressLayoutEmptyContentPlaceholder">We couldn\'t find anything. Tap the button to take your first image</string>
+    <string name="progressLayoutErrorTitlePlaceholder">No Connection</string>
+    <string name="progressLayoutErrorContentPlaceholder">We could not establish a connection with our servers. Please try again when you are connected to the internet.</string>
+
+    <string name="action_card">我的名片</string>
+    <string name="action_message">我的消息</string>
+    <string name="action_set">设置</string>
+    <string name="action_noUpdate">您的版本是最新的!</string>
+
+    <string name="hold_to_talk">按住说话</string>
+    <string name="sliding_upwards_and_cancel_sending">向上滑动，取消发送</string>
+
+    <!-- 发布通知 -->
+    <string name="notifer_cancel_publish">撤销发布</string>
+    <string name="notifer_timging_draft">定时发布，已存入草稿</string>
+    <string name="notifer_send_delay">%s秒后发送图说</string>
+    <string name="notifer_status_sending">正在发送图说</string>
+    <string name="notifer_send_success">图说发送成功</string>
+    <string name="notifer_send_faild">图说发送失败，已存入草稿</string>
+    <string name="contect_internet_faild">请检查网络连接!</string>
+
+    <string name="travel_together_notifer_send_delay">%s秒后发送旅拼</string>
+    <string name="travel_togethe_notifer_status_sending">正在发送旅拼</string>
+    <string name="travel_togethe_notifer_send_success">旅拼发送成功</string>
+    <string name="travel_togethe_notifer_send_faild">旅拼发送失败，已存入草稿</string>
+    <!-- 已存入草稿 -->
+    <string name="notifer_send_cancel_save_draft">取消图说发送，已存入草稿</string>
+    <string name="travel_togethe_notifer_send_cancel_save_draft">取消旅拼发送，已存入草稿</string>
+
+    <!-- Diaft-草稿箱 -->
+    <string name="title_draft">草稿箱</string>
+    <string name="empty_draft">没有草稿</string>
+    <string name="draft_date_format">MM月dd日 HH时mm分</string>
+    <string name="draft_del_confirm">确定删除选中的草稿吗？</string>
+    <string name="draft_del_draft_loading">正在删除草稿</string>
+    <string name="draft_del_draft_hint">成功删除草稿</string>
+
+    <string name="app_loading_more">加载中…</string>
+    <string name="app_no_more_data">没有更多数据了…</string>
+    <string name="upload_setting_desc">设置不同的图片质量，会影响浏览和发出的图片清晰度</string>
+
+    <string name="download_pic">下载</string>
+    <string name="msg_save_pic_success">图片已保存至%s文件夹</string>
+    <string name="msg_save_pic_faild">图片未下载完或者已删除</string>
+    <!-- 发布通知 -->
+    <string name="notifer_from_xingka">来自行咖</string>
+    <string name="scan_failed">扫描失败,请重试!</string>
+    <string name="folder_all">所有照片</string>
+    <string name="preview">预览</string>
+    <string name="msg_no_camera">没有系统相机</string>
+    <string name="msg_amount_limit">已经达到最高选择数量</string>
+    <string name="settings_cache_clear">清理中</string>
+    <string name="settings_cache_clear_complete">清理完成</string>
+    <string name="pickerview_cancel">取消</string>
+    <string name="pickerview_submit">确定</string>
+    <string name="title_activity_praise_list">PraiseListActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_crop_bg_image">CropBgImageActivity</string>
+    <string name="title_activity_integral_web">IntegralWebActivity</string>
+    <string name="title_activity_track_way_add">TrackWayAddActivity</string>
+    <string name="title_activity_choose_date">ChooseDateActivity</string>
+    <string name="title_activity_choose_route">ChooseRouteActivity</string>
+    <string name="title_activity_search_city">SearchCityActivity</string>
+    <string name="title_activity_choose_charge_type">ChooseChargeTypeActivity</string>
+    <string name="title_activity_choose_requirement">ChooseRequirementActivity</string>
+
+    <string name="msg_first_time_show_travel_together">欢迎咖主来到「旅拼」哦，在这里可以发布自驾拼车、结伴约行、拼线路的信息。\n\n开启「旅拼」前，请一定要仔细看看「旅拼」发布规范：\n（1）发布的信息要符合法律法规规定，不能侵犯其他用户合法权益，也不能干扰“行咖”运营;\n（2）在您发布的图片里，请不要含有广告、网址、二维码等内容;\n（3）请不要发布任何与“拼车结伴旅行线路”信息无关的内容；\n若违反上述操作，相关「旅拼」信息或图片将会被删除或屏蔽处理，切记切记哈！\n\n好啦，开始您的「旅拼」之旅吧，我们一起发现旅途的美好！</string>
+    <string name="title_activity_offical_photo_topic_list">OfficalPhotoTopicListActivity</string>
+    <string name="title_activity_base_share">BaseShareActivity</string>
+
+</resources>

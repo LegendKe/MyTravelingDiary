@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.ruihai.xingka.ui.trackway.ChooseRequirementActivity">
+
+    <include layout="@layout/common_toolbar_textview" />
+    <!-- 内容输入 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shap_caption_content_bg"
+        android:minHeight="129dp"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/padding_5"
+        android:paddingLeft="@dimen/padding_10"
+        android:paddingRight="@dimen/padding_10"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:paddingTop="@dimen/padding_10">
+
+        <EditText
+            android:id="@+id/et_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="top|left"
+            android:hint="妹子就好,大叔绕道"
+            android:imeOptions="flagNoExtractUi"
+            android:singleLine="false"
+            android:textColorHint="@color/gray_light"
+            android:textColor="@color/list_text_color"
+            android:textSize="@dimen/text_size_normal" />
+
+
+        <TextView
+            android:id="@+id/tv_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:textColor="@color/orange"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+
+    <com.ruihai.xingka.widget.TagCloudView
+        android:id="@+id/tag_cloud_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:tcvBackground="@color/white"
+        app:tcvBorder="8dp"
+        app:tcvCanTagClick="false"
+        app:tcvItemBorderHorizontal="8dp"
+        app:tcvItemBorderVertical="6dp"
+        app:tcvSingleLine="false"
+        app:tcvTextColor="@color/font_black_2" />
+</LinearLayout>

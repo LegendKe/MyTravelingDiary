@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!-- Toolbar -->
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="48.0dp"
+        android:layout_alignParentTop="true"
+        android:background="#3c3c46">
+
+        <ImageButton
+            android:id="@+id/ib_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:src="@drawable/selector_btn_back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="完善资料"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/btn_skip"
+            android:layout_width="48dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/selector_toolbar_button"
+            android:gravity="center"
+            android:text="跳过"
+            android:textColor="#fff"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <!-- 编辑我的背景墙 -->
+    <RelativeLayout
+        android:id="@+id/rl_logo"
+        android:background="@color/blue_man"
+        android:layout_width="match_parent"
+        android:layout_height="180dp">
+
+        <!-- 头像&Logo显示 -->
+        <RelativeLayout
+            android:id="@+id/avatar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="180dp">
+
+            <RelativeLayout
+                android:layout_width="99dp"
+                android:layout_height="99dp"
+                android:layout_centerInParent="true"
+                android:background="@mipmap/login_avatar_bg">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/sdv_avatar"
+                    android:layout_centerInParent="true"
+                    android:layout_width="92dp"
+                    android:layout_height="92dp"
+                    fresco:placeholderImage="@mipmap/login_logo"
+                    fresco:roundAsCircle="true"
+                    fresco:roundWithOverlayColor="@null"
+                    fresco:roundingBorderWidth="0dp"
+                    fresco:roundingBorderColor="@color/white" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!-- 完善资料操作表单 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="25dp"
+            android:orientation="vertical">
+
+            <!-- 昵称 -->
+            <EditText
+                android:id="@+id/et_nickname"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/edittext_unclick_status"
+                android:gravity="left|center_vertical"
+                android:textColorHint="@color/gray_text_color"
+                android:hint="输入您的昵称"
+                android:inputType="text"
+                android:paddingLeft="20dp"
+                android:paddingRight="6dp"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <!-- 性别 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/edittext_unclick_status">
+
+                <TextView
+                    android:id="@+id/tv_sex"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="6dp"
+                    android:text="选择性别"
+                    android:textColor="@color/gray_text_color"
+                    android:textSize="12sp" />
+
+                <!--<CheckBox-->
+                    <!--android:id="@+id/iv_boy"-->
+                    <!--android:layout_width="28dp"-->
+                    <!--android:layout_height="28dp"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_marginRight="5dp"-->
+                    <!--android:layout_toLeftOf="@+id/iv_girl"-->
+                    <!--android:button="@null"-->
+                    <!--android:background="@drawable/select_man" />-->
+
+                <!--<CheckBox-->
+                    <!--android:id="@+id/iv_girl"-->
+                    <!--android:layout_width="28dp"-->
+                    <!--android:layout_height="28dp"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:layout_marginRight="8dp"-->
+                    <!--android:button="@null"-->
+                    <!--android:background="@drawable/select_woman" />-->
+
+                <!--android:layout_marginTop="6dp"-->
+
+
+
+                <RadioGroup
+                    android:id="@+id/rg_main_tabbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:orientation="horizontal"
+                    android:background="@null"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical">
+
+                <cn.bingoogolapple.badgeview.BGABadgeRadioButton
+                    android:id="@+id/iv_boy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:background="@null"
+                    android:button="@null"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:checked="true"
+                    android:drawableTop="@drawable/select_man" />
+
+                <cn.bingoogolapple.badgeview.BGABadgeRadioButton
+                    android:id="@+id/iv_girl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:background="@null"
+                    android:button="@null"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:drawableTop="@drawable/select_woman" />
+                </RadioGroup>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/btn_complete"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:background="@drawable/selector_login_btn_bg"
+                android:text="完成,开始行咖之旅"
+                android:textColor="@color/selector_login_btn_text"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

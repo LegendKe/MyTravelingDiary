@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_set"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center|left"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="4dp"
+            android:layout_height="16dp"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/selector_set_btn" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_set_option"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:text="@string/mine_account_security"
+                android:textColor="@color/selector_bg_option"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_box_number"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/bg_draft_box"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_summary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="6.0dp"
+            android:textColor="@color/gray_lighter"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <com.ruihai.xingka.widget.SwitchButton
+        android:id="@+id/sb_message_push"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_marginRight="12dp"
+        android:clickable="true"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="12dp"
+        android:src="@mipmap/icon_set_back" />
+
+</LinearLayout>

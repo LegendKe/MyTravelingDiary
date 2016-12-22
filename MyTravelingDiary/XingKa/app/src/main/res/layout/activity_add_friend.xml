@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg"
+    android:orientation="vertical">
+
+    <!--<include layout="@layout/common_toolbar_textview"/>-->
+
+    <include layout="@layout/common_toolbar_edittext_text"/>
+
+    <ListView
+        android:id="@+id/lv_addfriend_first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:divider="@color/gray_light"
+        android:dividerHeight="1px"
+        android:listSelector="@android:color/transparent"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_light"/>
+
+    <ListView
+        android:visibility="visible"
+        android:layout_marginTop="10dp"
+        android:id="@+id/lv_addfriend_second"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:divider="@color/gray_light"
+        android:dividerHeight="1px"
+        android:listSelector="@android:color/transparent"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_light"/>
+
+    <ListView
+        android:layout_marginTop="10dp"
+        android:id="@+id/lv_addfriend_third"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:divider="@color/gray_light"
+        android:dividerHeight="1px"
+        android:listSelector="@android:color/transparent"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_light"/>
+
+    <ListView
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:id="@+id/lv_addfriend_fouth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:divider="@color/gray_light"
+        android:dividerHeight="1px"
+        android:listSelector="@android:color/transparent"/>
+
+</LinearLayout>

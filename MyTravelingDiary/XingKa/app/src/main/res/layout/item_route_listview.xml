@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:id="@+id/left_layout"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/red_line_top"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:background="@color/orange" />
+
+            <View
+                android:id="@+id/icon_start_city"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginLeft="10dp"
+
+                android:background="@drawable/shape_oriange_circle" />
+
+
+            <com.ruihai.iconicfontengine.widget.IconicFontTextView
+                android:id="@+id/icon_destination"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="{xk-destination}"
+                android:textColor="@color/orange"
+                android:textSize="12sp" />
+
+            <View
+                android:id="@+id/red_line_bottom"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:background="@color/orange" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_destination"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/left_layout"
+            android:gravity="center_vertical"
+            android:text="出发城市"
+            android:textColor="@color/list_name_text_color"
+            android:textSize="@dimen/text_size_small" />
+
+
+        <com.ruihai.iconicfontengine.widget.IconicFontTextView
+            android:id="@+id/more_img"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="{xk-set-back}"
+            android:textColor="@color/grey"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/tv_selected_tv_destination"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/more_img"
+            android:gravity="center_vertical"
+            android:text="合肥市" />
+    </RelativeLayout>
+
+
+</LinearLayout>

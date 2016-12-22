@@ -1,0 +1,65 @@
+<!--顶部toolbar-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/toolbar_height"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.ruihai.iconicfontengine.widget.IconicFontTextView
+            android:id="@+id/tv_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="{xk-back}"
+            android:textColor="@color/selector_toolbar_btn_text"
+            android:textSize="24sp" />
+
+        <com.flyco.tablayout.CommonTabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            tl:tl_iconVisible="false"
+            tl:tl_indicator_bounce_enable="false"
+            tl:tl_indicator_color="@color/orange"
+            tl:tl_indicator_width="40dp"
+            tl:tl_textSelectColor="@color/orange"
+            tl:tl_textUnselectColor="@color/black"
+            tl:tl_textsize="16sp" />
+
+
+        <com.ruihai.iconicfontengine.widget.IconicFontTextView
+            android:id="@+id/tv_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:text="{xk-add-friend}"
+            android:textColor="@color/selector_toolbar_btn_text"
+            android:textSize="24sp"
+            android:visibility="invisible"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.0px"
+        android:background="@color/view_color" />
+
+</LinearLayout>

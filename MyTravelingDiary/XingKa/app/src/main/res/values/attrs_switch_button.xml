@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SwitchButton">
+    	<attr name="insetBorderWidth" format="dimension" />
+    	<attr name="offBorderColor" format="reference|color" />
+    	<attr name="offColor" format="reference|color" />
+    	<attr name="onColor" format="reference|color" />
+    	<attr name="spotColor" format="reference|color" />
+    	<attr name="animate" format="reference|boolean" />
+    </declare-styleable>
+</resources>

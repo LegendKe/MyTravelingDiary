@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="#F2F2F4"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="60dp"
+            android:layout_height="34dp"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:text="@string/pickerview_cancel"
+            android:textColor="@drawable/wheel_timebtn"
+            android:textSize="15sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="请选择省市"
+            android:textColor="#9C9CA5"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="60dp"
+            android:layout_height="34dp"
+            android:layout_gravity="right|center"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:text="@string/pickerview_submit"
+            android:textColor="@drawable/wheel_timebtn"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#D8D3D3" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/optionspicker"
+            layout="@layout/include_optionspicker" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/optionspicker"
+            android:layout_alignTop="@id/optionspicker"
+            android:background="@drawable/bg_above_timepicker" />
+    </RelativeLayout>
+
+</LinearLayout>

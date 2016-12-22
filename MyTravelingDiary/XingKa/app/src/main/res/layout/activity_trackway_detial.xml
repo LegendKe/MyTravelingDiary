@@ -1,0 +1,192 @@
+<com.ruihai.xingka.widget.EnterLayoutAnimSupportContainer xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg"
+    tools:context="com.ruihai.xingka.ui.caption.CaptionDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_toolbar1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"
+            android:layout_gravity="top|center_horizontal"
+            android:layout_marginTop="0dp"
+            android:background="@color/white"
+            android:visibility="gone">
+
+            <com.ruihai.iconicfontengine.widget.IconicFontTextView
+                android:id="@+id/tv_back1"
+                android:layout_width="@dimen/toolbar_icon_width"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:background="@color/transparent"
+                android:clickable="true"
+                android:gravity="center_vertical|left"
+                android:text="{xk-back}"
+                android:textColor="@color/toolbar_text_color"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/list_name_text_color"
+                android:textSize="18sp" />
+
+            <com.ruihai.iconicfontengine.widget.IconicFontTextView
+                android:id="@+id/tv_right1"
+                android:layout_width="@dimen/toolbar_icon_width"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@color/transparent"
+                android:clickable="true"
+                android:gravity="center_vertical|right"
+                android:text="{xk-report}"
+                android:textColor="@color/toolbar_text_color"
+                android:textSize="24sp" />
+
+        </RelativeLayout>
+
+        <!--用户信息-->
+        <!--<include layout="@layout/trackway_userinfo"/>-->
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/elv_comment_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/common_bg"
+            android:cacheColorHint="@color/transparent"
+            android:fadingEdge="none"
+            android:fadingEdgeLength="0dip"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            android:scrollingCache="true"
+            android:transcriptMode="normal"
+            ptr:ptrAnimationStyle="flip"
+            ptr:ptrDrawable="@mipmap/loading_logo"
+            ptr:ptrHeaderTextColor="@color/font_black_comment"
+            ptr:ptrScrollingWhileRefreshingEnabled="true"
+            ptr:ptrShowIndicator="false" />
+
+        <!-- 操作按钮 -->
+        <LinearLayout
+
+            android:id="@+id/bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/ll_praise"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.ruihai.iconicfontengine.widget.IconicFontTextView
+                    android:id="@+id/ifb_praise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:text="{xk-praise}"
+                    android:textColor="@color/selector_caption_btn_text"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_collect"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.ruihai.iconicfontengine.widget.IconicFontTextView
+                    android:id="@+id/ifb_collect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:text="{xk-collect}"
+                    android:textColor="@color/selector_caption_btn_text"
+                    android:textSize="24sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_comment"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.ruihai.iconicfontengine.widget.IconicFontTextView
+                    android:id="@+id/ifb_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:text="{xk-comment}"
+                    android:textColor="@color/selector_caption_btn_text"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_share"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.ruihai.iconicfontengine.widget.IconicFontTextView
+                    android:id="@+id/ifb_share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:text="{xk-share}"
+                    android:textColor="@color/selector_caption_btn_text"
+                    android:textSize="24sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <include layout="@layout/common_enter_emoji" />
+
+</com.ruihai.xingka.widget.EnterLayoutAnimSupportContainer>
+
+
+
+

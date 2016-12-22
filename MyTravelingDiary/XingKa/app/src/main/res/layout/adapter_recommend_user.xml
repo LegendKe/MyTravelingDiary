@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/iv_head_portrait"
+            android:layout_width="34.0dp"
+            android:layout_height="34.0dp"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            fresco:placeholderImage="@mipmap/default_avatar"
+            fresco:placeholderImageScaleType="centerCrop"
+            fresco:backgroundImage="@color/gray_light"
+            fresco:roundAsCircle="true"
+            fresco:roundedCornerRadius="5dp"
+            fresco:roundingBorderColor="#e8e7ec"/>
+
+        <TextView
+            android:id="@+id/tv_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_head_portrait"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:text="暗夜惊魂"
+            android:textSize="16sp"
+            android:textColor="#33333d"/>
+
+        <ImageView
+            android:id="@+id/iv_vip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tv_nickname"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:visibility="gone"
+            android:src="@mipmap/icon_vip"/>
+
+        <TextView
+            android:id="@+id/tv_attention"
+            android:layout_width="50dp"
+            android:layout_height="22dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/padding_10"
+            android:layout_marginTop="14dp"
+            android:gravity="center"
+            android:background="@drawable/bg_rectangular_white_orange"
+            android:textColor="@color/orange"
+            android:textSize="13sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.0px"
+        android:background="#d8d9e2" />
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape android:shape="oval" android:useLevel="false">
+
+            <!-- 填充的颜色 -->
+            <solid android:color="#ff6400" />
+
+            <!-- 设置半径 -->
+
+            <size android:width="8dp" android:height="8dp" />
+
+            <!-- padding：Button里面的文字与Button边界的间隔 -->
+        </shape>
+    </item>
+
+
+</selector>

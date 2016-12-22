@@ -1,0 +1,179 @@
+<resources>
+    <declare-styleable name="PullToRefresh">
+        <!-- 设置刷新列表的背景色 -->
+        <attr name="ptrRefreshableViewBackground" format="reference|color" />
+        <!-- 设置下拉Header或者上拉Footer的背景色 -->
+        <attr name="ptrHeaderBackground" format="reference|color" />
+        <!-- 用于设置Header与Footer中文本的颜色 -->
+        <attr name="ptrHeaderTextColor" format="reference|color" />
+        <!-- 用于设置Header与Footer中上次刷新时间文本的颜色 -->
+        <attr name="ptrHeaderSubTextColor" format="reference|color" />
+        <!-- 刷新模式 -->
+        <attr name="ptrMode">
+            <flag name="disabled" value="0x0" /> <!-- 禁用下拉刷新 -->
+            <flag name="pullFromStart" value="0x1" /> <!-- 仅支持下拉刷新 -->
+            <flag name="pullFromEnd" value="0x2" /> <!-- 仅支持上拉刷新 -->
+            <flag name="both" value="0x3" /> <!-- 上拉刷新和下拉刷新都支持 -->
+            <flag name="manualOnly" value="0x4" /> <!-- 只允许手动触发 -->
+            <!-- These last two are depreacted -->
+            <flag name="pullDownFromTop" value="0x1" />
+            <flag name="pullUpFromBottom" value="0x2" />
+        </attr>
+        <!-- 如果为true会在mPullRefreshListView中出现icon，右上角和右下角，挺有意思的 -->
+        <attr name="ptrShowIndicator" format="reference|boolean" />
+        <!-- 同时改变头部和底部的刷新图标 -->
+        <attr name="ptrDrawable" format="reference" />
+        <!-- 头部视图的刷新图标 -->
+        <attr name="ptrDrawableStart" format="reference" />
+        <!-- 底部视图的刷新图标 -->
+        <attr name="ptrDrawableEnd" format="reference" />
+        <attr name="ptrOverScroll" format="reference|boolean" />
+        <!-- 分别设置拉Header或者上拉Footer中字体的类型颜色等等 -->
+        <attr name="ptrHeaderTextAppearance" format="reference" />
+        <attr name="ptrSubHeaderTextAppearance" format="reference" />
+        <!-- flip（翻转动画）， rotate（旋转动画） -->
+        <attr name="ptrAnimationStyle">
+            <flag name="rotate" value="0x0" />
+            <flag name="flip" value="0x1" />
+        </attr>
+        <!-- 刷新的时候，是否允许ListView或GridView滚动 -->
+        <attr name="ptrScrollingWhileRefreshingEnabled" format="reference|boolean" />
+        <!-- 决定了Header，Footer以何种方式加入mPullRefreshListView，true为headView方式加入，就是滚动时刷新头部会一起滚动,false不能刷新 -->
+        <attr name="ptrListViewExtrasEnabled" format="reference|boolean" />
+        <!-- 拉的时候头部或者尾部的刷新图片，是否多次旋转，true多次，false只是旋转一周，在下拉，图片不会在跟着旋转 -->
+        <attr name="ptrRotateDrawableWhilePulling" format="reference|boolean" />
+        <!-- BELOW HERE ARE DEPRECEATED. DO NOT USE. -->
+        <attr name="ptrAdapterViewBackground" format="reference|color" />
+        <attr name="ptrDrawableTop" format="reference" />
+        <attr name="ptrDrawableBottom" format="reference" />
+    </declare-styleable>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/style_color_primary</item>
+        <item name="colorPrimaryDark">@color/style_color_primary_dark</item>
+        <item name="colorAccent">@color/style_color_accent</item>
+    </style>
+
+    <!-- 全屏Theme -->
+    <style name="AppTheme.FullScreen" parent="AppTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <!-- 透明背景Theme -->
+    <style name="AppTheme.Transparent" parent="AppTheme">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
+    </style>
+
+    <style name="RbMainTab" parent="AutoWrap">
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/selector_main_tabbar_text</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:layout_marginTop">8.5dp</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="ProgressHUD" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:windowBackground">@drawable/progresshud_bg</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="CommonDialog" parent="@android:style/Theme.Translucent.NoTitleBar">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="CaptureTheme" parent="@android:style/Theme.Translucent.NoTitleBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowActionModeOverlay">true</item>
+    </style>
+
+    <style name="SquareCheckBoxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/checkbox_square_style</item>
+    </style>
+
+    <style name="RoundCheckBoxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/checkbox_round_style</item>
+    </style>
+
+    <style name="SegmentedRadioButton">
+        <item name="android:textColor">@drawable/segmented_button_text_color</item>
+        <item name="android:minHeight">26dp</item>
+        <item name="android:minWidth">56dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:button">@null</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="SwipeFling">
+        <item name="rotation_degrees">15</item>
+        <item name="min_adapter_stack">6</item>
+        <item name="max_visible">4</item>
+    </style>
+
+    <style name="roomRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/rating_bar</item>
+        <item name="android:drawablePadding">5dp</item>
+        <item name="android:minHeight">23dp</item>
+        <item name="android:maxHeight">23dp</item>
+    </style>
+
+    <!-- 时间选择器popwidnow 显示消失动画 -->
+    <style name="timepopwindow_anim_style">
+        <item name="android:windowEnterAnimation">@anim/timepicker_anim_enter_bottom
+        </item> <!-- 指定显示的动画xml -->
+        <item name="android:windowExitAnimation">@anim/timepicker_anim_exit_bottom
+        </item> <!-- 指定消失的动画xml -->
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_down</item>
+    </style>
+
+    <!-- 对话框style -->
+    <style name="custom_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:backgroundDimAmount">0.6</item>
+        <item name="android:windowAnimationStyle">@style/bottom_anim_style</item>
+    </style>
+
+    <style name="bottom_anim_style">
+        <item name="android:windowEnterAnimation">@anim/in_from_bottom</item>
+        <item name="android:windowExitAnimation">@anim/out_from_bottom</item>
+    </style>
+
+
+</resources>

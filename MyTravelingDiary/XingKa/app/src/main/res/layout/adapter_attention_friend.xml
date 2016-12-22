@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10.0dp"
+        android:background="#f2f2f4" />
+
+    <!-- 用户信息 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_10">
+
+        <com.facebook.drawee.view.SimpleDraweeView xmlns:fresco="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/sdv_avatar"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="#f3f3f3"
+            fresco:placeholderImage="@mipmap/default_avatar"
+            fresco:roundAsCircle="true"
+            fresco:roundWithOverlayColor="@color/white"
+            fresco:roundingBorderColor="@color/white"
+            fresco:roundingBorderWidth="0dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_nick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textColor="@color/list_name_text_color"
+                android:textSize="@dimen/text_size_xsmall" />
+
+            <TextView
+                android:id="@+id/tv_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="安徽, 合肥"
+                android:textColor="@color/gray_text_color"
+                android:textSize="@dimen/text_size_xxxxsmall" />
+
+            <TextView
+                android:id="@+id/tv_praise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="0"
+                android:textColor="@color/orange"
+                android:textSize="@dimen/text_size_xxsmall"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <com.ruihai.iconicfontengine.widget.IconicFontTextView
+            android:id="@+id/btn_add_follow"
+            android:layout_width="50dp"
+            android:layout_height="22dp"
+            android:background="@drawable/selector_follow_btn_bg"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="取消关注"
+            android:textColor="@color/selector_follow_btn_text"
+            android:textSize="@dimen/text_size_xxsmall" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divide_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="@dimen/padding_12"
+        android:layout_marginRight="@dimen/padding_12"
+        android:background="@color/divide_line"
+        android:visibility="visible" />
+
+</LinearLayout>

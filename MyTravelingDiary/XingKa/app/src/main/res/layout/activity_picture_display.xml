@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#6f000000"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/bg_rectangular_white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <!-- avatar -->
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/sdv_avatar"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center_vertical|left"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="10dp"
+                android:clickable="true"
+                android:visibility="visible"
+                fresco:placeholderImage="@mipmap/default_avatar"
+                fresco:roundAsCircle="true"
+                fresco:roundingBorderColor="@color/white"
+                fresco:roundingBorderWidth="0dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:orientation="horizontal">
+                    <!--nickname-->
+                    <TextView
+                        android:id="@+id/tv_nickname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:textColor="@color/contents_text"
+                        android:textSize="14sp"
+                        android:text="寂寞烟灰"/>
+                    <!-- sex -->
+                    <ImageView
+                        android:id="@+id/iv_sex"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="3dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:gravity="left"
+                    android:orientation="horizontal">
+                    <!--行咖号-->
+                    <TextView
+                        android:id="@+id/tv_xingka_numbername"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginRight="0dp"
+                        android:gravity="center"
+                        android:text="@string/mine_xingka_number"
+                        android:textColor="@color/gray_text_color"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/tv_xingka_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/gray_text_color"
+                        android:textSize="10sp" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sdv_picture"
+            android:layout_width="280dp"
+            android:layout_height="280dp"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray_text_color"
+            android:text="扫一扫二维码,添加我为好友"
+            android:layout_gravity="center"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_car_brand"
+        android:layout_width="100dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/selector_btn_status"
+        android:gravity="center"
+        android:textColor="@color/white" />
+
+</LinearLayout>

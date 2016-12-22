@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheckedTextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_label"
+    android:layout_width="70dp"
+    android:layout_height="24dp"
+    android:paddingLeft="20dp"
+    android:gravity="center"
+    android:singleLine="true"
+    android:ellipsize="end"
+    android:text="测试"
+    android:textColor="@drawable/selector_setting"
+    android:background="@drawable/bg_dotted_line" />

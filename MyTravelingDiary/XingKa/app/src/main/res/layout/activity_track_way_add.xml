@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+    <!-- 顶部Toolbar -->
+    <include layout="@layout/common_toolbar_text" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/at_title_layout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/padding_10"
+                android:paddingRight="@dimen/padding_8"
+                android:visibility="visible">
+
+                <com.ruihai.iconicfontengine.widget.IconicFontTextView
+                    android:id="@+id/icon_title"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:text="{xk-traveltogether_title}"
+                    android:textColor="@color/gray_text_color"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="主题"
+                    android:textColor="@color/font_black_0"
+                    android:textSize="@dimen/text_size_small" />
+
+                <EditText
+                    android:id="@+id/et_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="请输入"
+                    android:singleLine="true"
+                    android:textColor="@color/list_summary_text_color"
+                    android:textSize="@dimen/text_size_small" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/view_color" />
+
+            <LinearLayout
+                android:id="@+id/at_time_layout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/padding_10"
+                android:paddingRight="@dimen/padding_8"
+                android:visibility="visible">
+
+                <com.ruihai.iconicfontengine.widget.IconicFontTextView
+                    android:id="@+id/icon_time"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:text="{xk-traveltogether-time}"
+                    android:textColor="@color/gray_text_color"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="时间"
+                    android:textColor="@color/font_black_0"
+                    android:textSize="@dimen/text_size_small" />
+
+                <TextView
+                    android:id="@+id/tv_selected_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:text="请选择"
+                    android:textColor="@color/list_summary_text" />
+
+                <com.ruihai.iconicfontengine.widget.IconicFontTextView
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:text="{xk-set-back}"
+                    android:textColor="@color/grey"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/view_color" />
+
+            <LinearLayout
+                android:id="@+id/at_route_layout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/padding_10"
+                android:paddingRight="@dimen/padding_8"
+                android:visibility="visible">
+
+                <com.ruihai.iconicfontengine.widget.IconicFontTextView
+                    android:id="@+id/icon_route"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:text="{xk-traveltogether-route}"
+                    android:textColor="@color/gray_text_color"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_route"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="线路"
+                    android:textColor="@color/font_black_0"
+                    android:textSize="@dimen/text_size_small" />
+
+                <TextView
+                    android:id="@+id/tv_selected_route"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:text="请添加"
+                    android:textColor="@color/list_summary_text" />
+
+                <com.ruihai.iconicfontengine.widget.IconicFontTextView
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:text="{xk-set-back}"
+                    android:textColor="@color/grey"
+                    android:textSize="24sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+                <!-- 内容输入 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="129dp"
+                    android:layout_marginTop="10dp"
+                    android:minHeight="129dp"
+                    android:orientation="vertical"
+
+                    android:paddingBottom="@dimen/padding_5"
+                    android:paddingLeft="@dimen/padding_10"
+                    android:paddingRight="@dimen/padding_10"
+                    android:paddingTop="@dimen/padding_10">
+
+                    <EditText
+                        android:id="@+id/et_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="top|left"
+                        android:hint="请描述一下你的行程吧"
+                        android:imeOptions="flagNoExtractUi"
+                        android:singleLine="false"
+                        android:textColor="@color/font_black_2"
+                        android:textColorHint="#999"
+                        android:textSize="@dimen/text_size_xsmall" />
+
+                    <TextView
+                        android:id="@+id/tv_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:textColor="@color/orange"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="5dp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/at_expenses_layout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/padding_10"
+                android:paddingRight="@dimen/padding_8"
+                android:visibility="visible">
+
+                <com.ruihai.iconicfontengine.widget.IconicFontTextView
+                    android:id="@+id/icon_expenses"
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="0dp"
+                    android:gravity="center_vertical"
+                    android:text="{xk-traveltogether-charge}"
+                    android:textColor="@color/gray_text_color"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_expenses"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_toRightOf="@+id/icon_expenses"
+                    android:gravity="center_vertical"
+                    android:text="费用"
+                    android:textColor="@color/font_black_0"
+                    android:textSize="@dimen/text_size_small" />
+
+
+                <com.ruihai.iconicfontengine.widget.IconicFontTextView
+                    android:id="@+id/indicator1"
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:text="{xk-set-back}"
+                    android:textColor="@color/grey"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/tv_select_expenses"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@+id/indicator1"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/list_select_color" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/view_color" />
+
+            <RelativeLayout
+                android:id="@+id/at_numbers_layout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/padding_10"
+                android:paddingRight="@dimen/padding_8"
+                android:visibility="visible">
+
+                <com.ruihai.iconicfontengine.widget.IconicFontTextView
+                    android:id="@+id/icon_numbers"
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="0dp"
+                    android:gravity="center_vertical"
+                    android:text="{xk-traveltogether-number}"
+                    android:textColor="@color/gray_text_color"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_numbers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_toRightOf="@+id/icon_numbers"
+                    android:gravity="center_vertical"
+                    android:text="人数"
+                    android:textColor="@color/font_black_0"
+                    android:textSize="@dimen/text_size_small" />
+
+
+                <com.ruihai.iconicfontengine.widget.IconicFontTextView
+                    android:id="@+id/indicator2"
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:text="{xk-set-back}"
+                    android:textColor="@color/grey"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/tv_slelct_numbers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@+id/indicator2"
+                    android:gravity="center_vertical"
+
+                    android:textColor="@color/list_select_color" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/view_color" />
+
+            <LinearLayout
+                android:id="@+id/at_requirement_layout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/padding_10"
+                android:paddingRight="@dimen/padding_8"
+                android:visibility="visible">
+
+                <com.ruihai.iconicfontengine.widget.IconicFontTextView
+                    android:id="@+id/icon_requirement"
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="0dp"
+                    android:gravity="center_vertical"
+                    android:text="{xk-traveltogether-require}"
+                    android:textColor="@color/gray_text_color"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_requirement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:gravity="center_vertical"
+                    android:text="要求"
+                    android:textColor="@color/font_black_0"
+                    android:textSize="@dimen/text_size_small" />
+
+                <TextView
+                    android:id="@+id/tv_slelct_requirement"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:textColor="@color/list_select_color" />
+
+                <com.ruihai.iconicfontengine.widget.IconicFontTextView
+                    android:id="@+id/indicator3"
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:text="{xk-set-back}"
+                    android:textColor="@color/grey"
+                    android:textSize="24sp" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

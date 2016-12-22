@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ruihai.xingka">
+
+    <!-- Required 自定义用来收发消息的相关权限 -->
+    <permission
+        android:name="com.ruihai.xingka.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <!-- 添加权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- 读取通讯录权限 -->
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <!-- Optional. Required for location feature -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- Required -->
+    <uses-permission android:name="com.ruihai.xingka.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- QQ、QQ空间所需权限 -->
+    <uses-permission android:name="android.permission.SET_DEBUG_APP" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+
+    <!-- SDK 权限申明, 第三方 APP 接入时，请将 com.netease.nim.demo 替换为自己的包名 -->
+    <!-- 和下面的 uses-permission 一起加入到你的 AndroidManifest 文件中。 -->
+    <permission
+        android:name="com.ruihai.xingka.permission.RECEIVE_MSG"
+        android:protectionLevel="signature"/>
+    <!-- 接收 SDK 消息广播权限， 第三方 APP 接入时，请将 com.netease.nim.demo 替换为自己的包名 -->
+    <uses-permission android:name="com.ruihai.xingka.permission.RECEIVE_MSG"/>
+
+    <application
+        android:name=".XKApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme">
+
+        <!-- 云信IM APP key, 可以在这里设置，也可以在 SDKOptions 中提供。
+            如果 SDKOptions 中提供了，取 SDKOptions 中的值。 -->
+        <meta-data
+            android:name="com.netease.nim.appKey"
+            android:value="32dc471ba69d22a8b4be3afc37e6a03a" />
+
+        <!-- 高德地图定位key值,key值随着SHA1和包名不同改变 -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="a530931c683774c26310b9a1f42d26b2" />
+        <!-- android:value="a40ec3651936dbf60ffd5d90802aad9f" /> -->
+        <!-- android:value="a530931c683774c26310b9a1f42d26b2" /> -->
+        <!-- android:value="1024d73b625f8700640dae7aab514d07" /> -->
+        <!-- B4:E5:81:89:DB:D5:C8:3A:38:A7:04:24:F1:08:7D:41:E4:FE:C0:8F -->
+
+
+        <!-- 首页界面 -->
+        <activity
+            android:name=".ui.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- 主界面 -->
+        <!-- 引导页界面 -->
+        <activity
+            android:name=".ui.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.FullScreen" />
+        <activity
+            android:name=".ui.GuideActivity"
+            android:theme="@style/AppTheme.FullScreen" />
+        <!-- 登录界面 -->
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".ui.login.otherLogin.AccountBindActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity android:name=".ui.login.otherLogin.BindActivity" />
+        <!-- 注册界面 -->
+        <!-- 手机号码输入界面 -->
+        <activity
+            android:name=".ui.login.RegisterPhoneNumActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <!-- 选择国家输入界面 -->
+        <activity
+            android:name=".ui.login.chooseCountry.CountryActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <!-- 验证码输入界面 -->
+        <activity
+            android:name=".ui.login.RegisterVerifyActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <!-- 密码输入界面 -->
+        <activity
+            android:name=".ui.login.RegisterPasswordActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <!-- 完善资料界面 -->
+        <activity
+            android:name=".ui.login.PerfectDataActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <!-- 密码重置界面 -->
+        <!-- 手机号码输入界面 -->
+        <activity
+            android:name=".ui.login.PhoneNumActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <!-- 验证码输入界面 -->
+        <activity
+            android:name=".ui.login.VerifyActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <!-- 密码输入界面 -->
+        <activity
+            android:name=".ui.login.PasswordActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <!-- 用户许可协议界面 -->
+        <activity android:name=".ui.login.AgreementActivity" />
+        <!-- 我的图说点赞人列表界面 -->
+        <activity android:name=".ui.mine.PraiseActivity" />
+        <!-- 我的好友列表界面 -->
+        <activity android:name=".ui.mine.FriendsActivity" />
+        <!-- 关注-好友-粉丝界面 -->
+        <!-- 关注粉丝界面 -->
+        <activity android:name=".ui.mine.FollowAndFansActivity" />
+        <!-- 我的名片界面 -->
+        <activity android:name=".ui.mine.BusinessCardActivity" />
+        <!-- 我的图说收藏界面 -->
+        <activity android:name=".ui.mine.UserCollectionActivity" />
+        <!-- 我的图说界面 -->
+        <activity android:name=".ui.mine.UserCaptionActivity" />
+        <!-- 分享名片界面 -->
+        <activity
+            android:name=".ui.mine.ShareCardActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 分享界面 -->
+        <activity
+            android:name=".ui.caption.ShareCaptionActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".ui.trackway.ShareTrackwayActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 设置界面 -->
+        <activity android:name=".ui.mine.SettingActivity" />
+        <!-- 账号安全界面 -->
+        <activity android:name=".ui.mine.AccountSecurityActivity" />
+        <!-- 说说界面 -->
+        <activity android:name=".ui.mine.TalkActivity" />
+        <!-- 昵称界面 -->
+        <activity android:name=".ui.mine.NickActivity" />
+        <!-- 编辑资料界面 -->
+        <activity android:name=".ui.mine.EditUserDataActivity" />
+        <!-- 草稿箱界面 -->
+        <activity android:name=".ui.mine.DraftBoxActivity" />
+        <!-- 关于行咖界面 -->
+        <activity android:name=".ui.mine.AboutActivity" />
+        <!-- 分享关于行咖界面 -->
+        <activity
+            android:name=".ui.mine.ShareAboutActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 行咖推荐界面 -->
+        <activity
+            android:name=".ui.mine.RecommendActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 图片展示界面 -->
+        <activity
+            android:name=".ui.mine.PictureDisplayActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!--  修改密码界面 -->
+        <activity android:name=".ui.mine.ChangePasswordActivity" />
+        <!-- 绑定手机界面 -->
+        <activity android:name=".ui.mine.ChangeMobileActivity" />
+
+        <!-- 添加好友界面 -->
+        <activity android:name=".ui.mine.AddFriendsActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <!-- 搜索行咖号或昵称 -->
+        <activity
+            android:name=".ui.mine.SearchUsersActivity"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <!-- 背景墙图片裁剪界面 -->
+        <activity android:name=".ui.mine.CropBgImageActivity" />
+        <!-- 扫一扫界面 -->
+        <activity android:name=".ui.mine.MipcaActivityCapture" />
+        <!-- 扫码结果界面 -->
+        <activity android:name=".ui.mine.ScanResultActivity" />
+        <!-- 通讯录好友界面 -->
+        <activity android:name=".ui.mine.MailListActivity" />
+        <!-- 邀请通讯录好友界面 -->
+        <activity android:name=".ui.mine.InviteFriendsActivity" />
+        <!-- 行咖推荐好友界面 -->
+        <activity android:name=".ui.mine.RecommendFriendActivity" />
+        <!-- 消息界面 -->
+        <!-- 系统通知界面 -->
+        <!-- 自定义消息界面 -->
+        <activity android:name=".ui.mine.ClassifyMessageActivity" />
+        <!-- 消息中心 -->
+        <activity android:name=".ui.mine.MyMessageActivity" />
+
+        <!--***************************************** 咖聊 **************************************-->
+        <!--聊天界面-->
+        <activity android:name=".ui.talking.ChatActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <!--好友-->
+        <activity android:name=".ui.talking.FriendActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <!--添加好友-->
+        <activity android:name=".ui.talking.AddFriendActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <!--新的好友-->
+        <activity android:name=".ui.talking.NewFriendsActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <!--聊天信息-->
+        <activity android:name=".ui.talking.MessageInfoActivity"/>
+        <!--群聊-->
+        <activity android:name=".ui.talking.TeamListActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <!--投诉-->
+        <activity android:name=".ui.talking.ComplainActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <!-- 我的好友备注界面 -->
+        <activity android:name=".ui.talking.RemarkActivity" />
+
+
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".ui.caption.CaptionAddActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity android:name=".ui.caption.ChooseFriendsActivity" />
+        <activity android:name=".ui.common.PhotoPickerActivity" />
+        <activity
+            android:name=".ui.common.PhotoPagerActivity"
+            android:theme="@style/AppTheme.FullScreen" />
+        <activity
+            android:name=".ui.common.MultiImageSelectorActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".ui.caption.ChooseCarBrandActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <!-- 图说地点选择界面 -->
+        <activity
+            android:name=".ui.caption.ChooseLocationActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <!-- 图说心情选择界面 -->
+        <activity android:name=".ui.caption.ChooseFeelingActivity" />
+        <!-- 图说图片裁剪界面 -->
+        <activity android:name=".ui.caption.CaptionEditActivity" />
+        <activity android:name=".ui.caption.CropImageActivity" />
+        <!-- 图说详情界面 -->
+        <activity
+            android:name=".ui.caption.CaptionDetailActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <!-- 发布图说图片预览界面 -->
+        <activity
+            android:name=".ui.caption.ImagePreviewActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".ui.common.WebActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity android:name=".ui.mine.UserProfileActivity" />
+
+        <!-- 旅拼详情界面 -->
+        <activity
+            android:name=".ui.trackway.TrackwayDetailActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity android:name=".ui.trackway.TrackWayAddActivity" />
+        <activity android:name=".ui.trackway.ChooseDateActivity" />
+        <activity android:name=".ui.trackway.ChooseRouteActivity" />
+        <activity android:name=".ui.trackway.LocationActivity" />
+        <activity android:name=".ui.mine.UploadSettingActivity" />
+        <!--免打扰设置-->
+        <activity android:name=".ui.mine.SettingNotDisturbedActivity" />
+        <!-- 活动详情页面 -->
+        <activity android:name=".ui.caption.BannerInfoActivity" />
+        <!-- 分享活动界面 -->
+        <activity
+            android:name=".ui.caption.ShareBannerActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- ################# 注册SDK使用的Activity ################# -->
+        <activity
+            android:name="com.umeng.socialize.editorpage.ShareActivity"
+            android:configChanges="orientation|keyboard"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:theme="@style/Theme.UMDialog"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+
+        <!-- ############ QQ空间和QQ SSO授权的Activity注册 ############ -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- 100424468，如果你使用的公用账号，则不需要修改；否则修改成你在QQ开放平台申请的 APP ID -->
+                <data android:scheme="tencent1104779029" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!--
+        <service
+            android:name="com.sina.weibo.sdk.net.DownloadService"
+            android:exported="false" />
+        -->
+
+        <activity
+            android:name=".WBShareActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <!-- 集成友盟统计分析 value:55acb35867e58e198400569d (debug) -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="564fe98b67e58ee612005026" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="XK" />
+
+        <!-- 集成友盟自动更新 -->
+        <service
+            android:name="com.umeng.update.net.DownloadingService"
+            android:process=":DownloadingService" />
+
+        <activity
+            android:name="com.umeng.update.UpdateDialogActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 图说发布服务 -->
+        <service android:name=".ui.caption.publisher.service.PublishService" />
+        <!-- 旅拼发布服务 -->
+        <service android:name=".ui.trackway.publisher.service.PublishService" />
+
+        <!-- ############ 极光推送模块配置信息 ############ -->
+
+
+        <!-- 消息推送界面 测试状态通知栏，需要打开的Activity -->
+        <activity android:name=".ui.mine.NotificationSettingsActivity">
+            <intent-filter>
+                <action android:name="jpush.testAction" />
+
+                <category android:name="jpush.testCategory" />
+            </intent-filter>
+        </activity>
+
+        <!-- 极光推送 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+
+        <!-- Required SDK核心功能 -->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ruihai.xingka" />
+            </intent-filter>
+        </activity>
+        <!-- Required  SDK核心功能 -->
+        <service
+            android:name="cn.jpush.android.service.DownloadService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <!-- Required SDK 核心功能 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+
+        <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
+        <!-- 若不启用该功能可删除该组件，将不拉起其他应用也不能被其他应用拉起 -->
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DaemonService" />
+
+                <category android:name="com.ruihai.xingka" />
+            </intent-filter>
+        </service>
+
+        <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />
+                <!-- Required  显示通知栏 -->
+                <category android:name="com.ruihai.xingka" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Required SDK核心功能 -->
+        <receiver android:name="cn.jpush.android.service.AlarmReceiver" />
+
+        <!-- User defined.用户自定义的广播接收器 -->
+        <receiver
+            android:name=".receiver.PushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <!-- Required  用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.UNREGISTRATION" />
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <!-- Required  用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <!-- Required  用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <!-- Required  用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK" />
+                <!-- Optional 用户接受Rich Push Javascript 回调函数的intent -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" />
+                <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="com.ruihai.xingka" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Required. Enable it you can get statistics data with channel -->
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default" />
+        <!-- 值来自开发者平台取得的AppKey -->
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="233c05e085e8b7498328922b" />
+        <!-- 点赞列表界面 -->
+        <activity android:name=".ui.caption.PraiseListActivity" />
+        <!-- 官方图说的web详情页面 -->
+        <activity android:name=".ui.caption.OfficalCaptionInfoActivity" />
+        <activity android:name=".ui.common.CommonWebActivity" />
+        <activity
+            android:name=".ui.caption.ShareOfficalCatpionActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".ui.mine.IntegralWebActivity"
+            android:label="@string/title_activity_integral_web"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!--
+        ATTENTION: This was auto-generated to add Google Play services to your project for
+        App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".ui.trackway.SearchCityActivity"
+            android:label="@string/title_activity_search_city"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ui.trackway.ChooseRequirementActivity"
+            android:label="@string/title_activity_choose_requirement"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ui.mine.OfficalPhotoTopicListActivity"
+            android:label="@string/title_activity_offical_photo_topic_list"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ui.mine.BaseShareActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+
+        <!-- ################# 云信SDK及相关权限配置 ################# -->
+
+        <!-- 声明云信后台服务，如需保持后台推送，使用独立进程效果会更好。 -->
+        <service
+            android:name="com.netease.nimlib.service.NimService"
+            android:process=":core"/>
+
+        <service
+            android:name="com.netease.nimlib.service.NimService$Aux"
+            android:process=":core"/>
+
+        <!-- 云信SDK的监视系统启动和网络变化的广播接收器，用户开机自启动以及网络变化时候重新登录，
+            保持和 NimService 同一进程 -->
+        <receiver android:name="com.netease.nimlib.service.NimReceiver"
+            android:process=":core"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- 云信进程间通信 Receiver -->
+        <receiver android:name="com.netease.nimlib.service.ResponseReceiver"/>
+
+        <!-- 安卓保活配置 -->
+        <service
+            android:name="com.netease.cosine.core.CosineService"
+            android:process=":cosine">
+        </service>
+
+        <receiver
+            android:name="com.netease.cosine.target.CosineReceiver"
+            android:exported="true"
+            android:process=":cosine">
+        </receiver>
+
+        <meta-data
+            android:name="com.netease.cosine.target"
+            android:value=""/>
+        <meta-data
+            android:name="com.netease.cosine.target.receiver"
+            android:value="com.netease.nimlib.service.NimReceiver"/>
+
+
+    </application>
+
+</manifest>

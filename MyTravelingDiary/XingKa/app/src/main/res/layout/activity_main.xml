@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg">
+
+    <RelativeLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="40dp" />
+
+    <RadioGroup
+        android:id="@+id/rg_main_tabbar"
+        style="@style/MatchWrap.Horizontal"
+        android:layout_gravity="bottom"
+        android:background="@drawable/layer_main_tabbar_bg"
+        android:gravity="center_vertical">
+
+        <cn.bingoogolapple.badgeview.BGABadgeRadioButton
+            android:id="@+id/brb_main_caption"
+            style="@style/RbMainTab"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:drawableTop="@drawable/selector_tab_caption"
+            android:text="@string/module_caption" />
+
+        <cn.bingoogolapple.badgeview.BGABadgeRadioButton
+            android:id="@+id/brb_main_trackway"
+            style="@style/RbMainTab"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/selector_tab_trackway"
+            android:text="@string/module_trackway" />
+
+        <RelativeLayout
+            android:id="@+id/rl_add_click"
+            style="@style/WrapWrap"
+            android:layout_marginBottom="-3dp"
+            android:background="@mipmap/tab_plus_bg"
+            android:gravity="bottom">
+
+            <ImageView
+                android:id="@+id/iv_main_plus"
+                style="@style/WrapWrap"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="1.5dp"
+                android:src="@drawable/selector_tab_plus" />
+        </RelativeLayout>
+
+        <cn.bingoogolapple.badgeview.BGABadgeRadioButton
+            android:id="@+id/brb_main_message"
+            style="@style/RbMainTab"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/selector_tab_piazza"
+            android:text="@string/module_talking" />
+
+
+        <cn.bingoogolapple.badgeview.BGABadgeRadioButton
+            android:id="@+id/brb_main_mine"
+            style="@style/RbMainTab"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/selector_tab_mine"
+            android:text="@string/module_mine" />
+
+    </RadioGroup>
+
+</FrameLayout>

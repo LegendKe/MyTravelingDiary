@@ -1,0 +1,71 @@
+<!--顶部toolbar-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/toolbar_height"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:background="@color/white">
+
+        <com.ruihai.iconicfontengine.widget.IconicFontTextView
+            android:id="@+id/tv_back"
+            android:layout_width="@dimen/toolbar_icon_width"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:clickable="true"
+            android:gravity="center_vertical|left"
+            android:text="{xk-back}"
+            android:textColor="@color/selector_toolbar_btn_text"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/list_name_text_color"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_report"
+            android:layout_width="48dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/selector_toolbar_gray"
+            android:gravity="center"
+            android:text="举报"
+            android:textColor="@color/selector_toolbar_btn_text"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <com.ruihai.iconicfontengine.widget.IconicFontTextView
+            android:id="@+id/tv_right"
+            android:layout_width="@dimen/toolbar_icon_width"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:clickable="true"
+            android:gravity="center_vertical|right"
+            android:text="{xk-right}"
+            android:textColor="@color/selector_toolbar_btn_text"
+            android:textSize="24sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/buttom_line"
+        android:layout_width="match_parent"
+        android:layout_height="1.0px"
+        android:background="@color/view_color" />
+
+</LinearLayout>

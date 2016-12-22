@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ruihai.xingka.widget.SquareItemLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_photo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:adjustViewBounds="true"
+        android:background="@drawable/selector_photopicker_photo_bg"
+        android:padding="1dip"
+        android:scaleType="centerCrop" />
+
+    <View
+        android:id="@+id/v_mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#88000000"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/v_selected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="2dip"
+        android:background="@null"
+        android:clickable="true"
+        android:padding="@dimen/padding_8"
+        android:src="@drawable/selector_photopicker_photo_checkbox_bg" />
+
+</com.ruihai.xingka.widget.SquareItemLayout>

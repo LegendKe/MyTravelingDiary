@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_toolbar_textview" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <com.ruihai.xingka.widget.ListViewForScrollView
+            android:id="@+id/lvfs_labal"
+            android:layout_width="70dp"
+            android:divider="@null"
+            android:layout_height="match_parent"/>
+
+        <View
+            android:background="@color/gray_light"
+            android:layout_width="1px"
+            android:layout_height="match_parent"/>
+
+        <ListView
+            android:id="@+id/lv_recommend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginTop="@dimen/padding_10"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/activity_tab" />
+
+    <!-- 密码重置 表单 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="25dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="25dp"
+            android:orientation="vertical">
+
+            <!-- 验证码发送&获取 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_verify_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_unclick_status"
+                    android:gravity="left|center_vertical"
+                    android:hint="请输入验证码"
+                    android:inputType="number"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="6dp"
+                    android:textColor="@color/input_text_color"
+                    android:textColorHint="@color/gray_text_color"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/btn_get_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/login_verification_button"
+                    android:gravity="center"
+                    android:text="重新获取"
+                    android:textColor="#fff"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <!--下一步按钮-->
+            <TextView
+                android:id="@+id/btn_register"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/selector_login_btn_bg"
+                android:gravity="center"
+                android:text="下一步"
+                android:textColor="@color/selector_login_btn_text"
+                android:textSize="14sp" />
+
+            <!--联系客服-->
+            <TextView
+                android:id="@+id/tv_base"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="如遇到手机丢失，忘记行账户，账号被盗等问题，请及时与我们取得联系。客服QQ:2015686190"
+                android:textColor="#b4b4bc"
+                android:textSize="@dimen/text_size_xxsmall"
+                android:visibility="gone" />
+
+            <!-- 注册协议 -->
+            <LinearLayout
+                android:id="@+id/ll_base"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/register_bottom_agree"
+                    android:textColor="@color/gray_dark"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_user_agreement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/register_bottom_agreement"
+                    android:textColor="@color/orange"
+                    android:textSize="13sp" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

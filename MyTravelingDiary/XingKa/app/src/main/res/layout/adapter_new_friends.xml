@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10.0dp"
+        android:background="#f2f2f4" />
+
+    <!-- 用户信息 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_10">
+
+        <com.facebook.drawee.view.SimpleDraweeView xmlns:fresco="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/sdv_avatar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="#f3f3f3"
+            fresco:placeholderImage="@mipmap/default_avatar"
+            fresco:roundAsCircle="true"
+            fresco:roundWithOverlayColor="@color/white"
+            fresco:roundingBorderColor="@color/white"
+            fresco:roundingBorderWidth="0dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_nick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="高圆圆"
+                android:textColor="@color/list_name_text_color"
+                android:textSize="@dimen/text_size_xsmall" />
+
+            <TextView
+                android:id="@+id/tv_describe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="已添加你为好友"
+                android:textColor="@color/gray_text_color"
+                android:visibility="gone"
+                android:textSize="@dimen/text_size_xxxxsmall" />
+
+        </LinearLayout>
+
+        <com.ruihai.iconicfontengine.widget.IconicFontTextView
+            android:id="@+id/btn_agree"
+            android:layout_width="48dp"
+            android:layout_height="22dp"
+            android:background="@drawable/selector_agree_bg"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="同意"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/selector_agree_textcolor"
+            android:textSize="@dimen/text_size_xxsmall" />
+
+        <com.ruihai.iconicfontengine.widget.IconicFontTextView
+            android:id="@+id/btn_refused"
+            android:layout_width="48dp"
+            android:layout_height="22dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/selector_agree_bg"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="拒绝"
+            android:textColor="@color/selector_agree_textcolor"
+            android:textSize="@dimen/text_size_xxsmall" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divide_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:background="@color/divide_line"
+        android:visibility="visible" />
+
+</LinearLayout>
+

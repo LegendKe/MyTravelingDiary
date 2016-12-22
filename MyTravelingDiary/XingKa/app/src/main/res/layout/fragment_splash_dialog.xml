@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <WebView
+            android:id="@+id/webview_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </WebView>
+
+        <TextView
+            android:id="@+id/tv_count_down"
+            android:layout_width="64dp"
+            android:layout_height="24dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/open_app_skip_btn"
+            android:clickable="true"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textSize="11sp"
+            android:text="5s | 跳过"/>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/splash_bottom_slogan" />
+
+    </LinearLayout>
+
+</LinearLayout>

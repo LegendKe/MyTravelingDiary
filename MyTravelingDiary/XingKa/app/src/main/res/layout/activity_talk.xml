@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/common_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_toolbar_textview" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="@dimen/padding_15"
+        android:layout_marginLeft="@dimen/padding_15"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_mytalk"
+            android:layout_width="wrap_content"
+            android:gravity="top"
+            android:layout_marginTop="10dp"
+            android:layout_height="108dp"
+            android:layout_weight="1"
+            android:hint="发表说说(最多90字)"
+            android:textColor="@color/gray_dark"
+            android:textSize="16sp"
+            android:padding="@dimen/padding_5"
+            android:background="@drawable/bg_rectangular_orange"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_edit_complete"
+        android:layout_width="match_parent"
+        android:layout_height="36.0dp"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="@dimen/padding_15"
+        android:layout_marginLeft="@dimen/padding_15"
+
+        android:background="@drawable/bg_rectangular_green_5"
+        android:gravity="center"
+        android:text="编辑完成"/>
+</LinearLayout>

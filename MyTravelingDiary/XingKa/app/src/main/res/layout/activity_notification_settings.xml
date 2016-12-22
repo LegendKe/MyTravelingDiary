@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg"
+    android:orientation="vertical">
+
+    <!--顶部toolbar-->
+    <include layout="@layout/common_toolbar_textview" />
+
+    <ListView
+        android:id="@+id/lv_first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:dividerHeight="1px"
+        android:listSelector="@android:color/transparent" />
+
+    <com.ruihai.xingka.widget.AppNoScrollerListView
+        android:id="@+id/list1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:divider="@drawable/list_divider1"
+        android:dividerHeight="1px"
+        android:listSelector="@android:color/transparent" />
+
+    <View
+        android:id="@+id/view_first"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:visibility="visible"
+        android:background="@color/gray_light" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="12sp"
+        android:textColor="@color/gray_lighter"
+        android:text="在设定的时间内行咖消息不再提醒"/>
+
+    <com.ruihai.xingka.widget.AppNoScrollerListView
+        android:id="@+id/list2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:divider="@drawable/list_divider1"
+        android:dividerHeight="1px"
+        android:listSelector="@android:color/transparent" />
+
+    <View
+        android:id="@+id/view_second"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:visibility="visible"
+        android:background="@color/gray_light" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="12sp"
+        android:textColor="@color/gray_lighter"
+        android:text="当行咖运行时的消息提醒形式"/>
+
+</LinearLayout>

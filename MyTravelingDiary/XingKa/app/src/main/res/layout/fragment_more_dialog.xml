@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#90ffffff">
+
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/action_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="bottom|center_horizontal">
+
+            <TextView
+                android:id="@+id/more_caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="56dip"
+                android:layout_marginRight="30dp"
+                android:clickable="true"
+                android:drawablePadding="5.0dp"
+                android:drawableTop="@mipmap/tabbar_compose_caption"
+                android:gravity="center_horizontal"
+                android:text="@string/module_caption"
+                android:textSize="12sp"
+                android:textColor="@color/gray_text_color" />
+
+            <TextView
+                android:id="@+id/more_take_picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="56dip"
+                android:layout_toRightOf="@+id/more_caption"
+                android:clickable="true"
+                android:drawablePadding="5.0dp"
+                android:drawableTop="@mipmap/tabbar_compose_camera"
+                android:gravity="center_horizontal"
+                android:text="@string/module_trackway"
+                android:textSize="12sp"
+                android:textColor="@color/gray_text_color" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/center_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="1dip"
+        android:src="@drawable/selector_tab_plus" />
+
+</FrameLayout>

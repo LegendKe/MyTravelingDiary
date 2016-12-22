@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/common_bg" />
+
+
+
+</LinearLayout>
+
+<!--<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--xmlns:cube_ptr="http://schemas.android.com/apk/res-auto"-->
+<!--xmlns:fab="http://schemas.android.com/apk/res-auto"-->
+<!--xmlns:tools="http://schemas.android.com/tools"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="match_parent"-->
+<!--android:background="@color/common_bg"-->
+<!--tools:context="com.ruihai.xingka.ui.caption.fragment.CaptionListFragment">-->
+
+<!--<in.srain.cube.views.ptr.PtrClassicFrameLayout-->
+    <!--android:id="@+id/rotate_header_list_view_frame"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--cube_ptr:ptr_duration_to_close="200"-->
+    <!--cube_ptr:ptr_duration_to_close_header="1000"-->
+    <!--cube_ptr:ptr_keep_header_when_refresh="true"-->
+    <!--cube_ptr:ptr_pull_to_fresh="false"-->
+    <!--cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2"-->
+    <!--cube_ptr:ptr_resistance="1.7">-->
+
+    <!--<android.support.v7.widget.RecyclerView-->
+        <!--android:id="@+id/recyclerView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent" />-->
+<!--</in.srain.cube.views.ptr.PtrClassicFrameLayout>-->
+
+<!--<com.melnykov.fab.FloatingActionButton-->
+    <!--android:id="@+id/floatButton"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="bottom|right"-->
+    <!--android:layout_margin="10dp"-->
+    <!--android:src="@mipmap/scroll_to_top"-->
+    <!--fab:fab_colorNormal="#b2000000"-->
+    <!--fab:fab_colorPressed="#b2ff6400"-->
+    <!--fab:fab_colorRipple="#b2ff6400"-->
+    <!--fab:fab_shadow="false"-->
+    <!--fab:fab_type="mini" />-->
+
+<!--</FrameLayout>-->

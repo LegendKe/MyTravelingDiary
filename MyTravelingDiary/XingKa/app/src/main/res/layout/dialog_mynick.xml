@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:scrollbars="none">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:layout_marginLeft="@dimen/padding_15"
+        android:layout_marginRight="@dimen/padding_15"
+        android:layout_marginTop="10dp">
+
+        <EditText
+            android:id="@+id/et_mytalk"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:background="@drawable/bg_rectangular_orange"
+            android:gravity="top"
+            android:hint="请输入昵称"
+            android:maxEms="10"
+            android:padding="@dimen/padding_5"
+            android:singleLine="false"
+            android:textColor="@color/gray_dark"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_nickname_limit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="@dimen/padding_15"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/gray_text_color"
+        android:textSize="@dimen/text_size_small" />
+
+    <TextView
+        android:id="@+id/tv_edit_complete"
+        android:layout_width="match_parent"
+        android:layout_height="36.0dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="@dimen/padding_15"
+        android:layout_marginRight="@dimen/padding_15"
+        android:background="@drawable/bg_rectangular_green_5"
+        android:gravity="center"
+        android:text="完成"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+</LinearLayout>

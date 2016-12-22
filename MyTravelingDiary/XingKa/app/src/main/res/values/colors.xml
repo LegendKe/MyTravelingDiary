@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="common_bg">#f2f2f4</color>
+    <color name="common_gray">#4dbbbbbf</color>
+    <color name="main_blurry">#90FFFFFF</color>
+    <color name="white">#ffffff</color>
+    <color name="white_disabled">#9bffffff</color>
+    <color name="black">#000</color>
+    <color name="green">#38B712</color>
+    <color name="orange">#ff7800</color>
+    <color name="orange1">#ff6400</color>
+    <color name="gray_caption_operation">#e6e4eb</color>
+    <color name="orange_woman">#ff6464</color>
+    <color name="blue_man">#00a0ff</color>
+    <color name="dafual_bg">#666666</color>
+    <color name="orange_username">#999999</color>
+    <color name="bg_btn_gray">#cacad4</color>
+    <color name="grey">#b4b4bc</color>
+    <color name="grey_back">#e5e3ea</color>
+    <color name="style_color_primary">#fbfbfb</color>
+    <color name="style_color_primary_dark">#21425d</color>
+    <color name="style_color_accent">#21425d</color>
+    <color name="pager_bg">#CA000000</color>
+    <color name="system_bar_color">#ff000000</color>
+    <color name="blue">#1d9ff0</color>
+    <color name="blue_ok">#0077fe</color>
+    <color name="blue_forget">#0078ff</color>
+    <color name="red">#dc445b</color>
+    <color name="red_cancle">#ff2814</color>
+    <color name="gray_color">#67676f</color>
+    <color name="gray_dark">#5b5b5d</color>
+    <color name="recommend_bg">#2e2d36</color>
+    <color name="gray_light">#dcdce4</color>
+    <color name="gray_lighter">#bcbcc4</color>
+    <color name="gray_press_bg">#f5f5f5</color>
+    <color name="balck_toolbar_bg">#99000000</color>
+
+    <color name="black_semi_transparent">#B2000000</color>
+    <color name="commen_bg">#48484a</color>
+    <color name="input_border_gray">#e5e5eb</color>
+    <color name="input_change">#e5e4e9</color>
+    <color name="input_text_color">#260c0f</color>
+    <color name="yellow_text_colot">#ffa427</color>
+    <color name="gray_text_color">#9999a3</color>
+    <color name="location_color">#b8b8bd</color>
+    <color name="address_color">#d3d3d5</color>
+    <color name="toolbar_text_color">#9c9ca0</color>
+    <color name="delete_color">#cacad4</color>
+    <color name="toolbar_text_color_other">#7a7a7a</color>
+    <color name="photopicker_green_light">#a5d143</color>
+    <color name="photopicker_selected_bg">#44000000</color>
+    <color name="photopicker_common_primary">#f3f3f3</color>
+    <color name="photopicker_text_40">#282828</color>
+    <color name="bg_text_selected">#9e9e9e</color>
+    <color name="divide">#ffeeeeee</color>
+    <color name="divide_line">#ffdddddd</color>
+    <color name="reply_text_color">#9999a5</color>
+    <color name="contents_text">#ff000000</color>
+    <color name="encode_view">#ffffffff</color>
+    <color name="help_button_view">#ffcccccc</color>
+    <color name="help_view">#ff404040</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="result_image_border">#ffffffff</color>
+    <color name="result_minor_text">#ffc0c0c0</color>
+    <color name="result_points">#c000ff00</color>
+    <color name="result_text">#ffffffff</color>
+    <color name="result_view">#b0000000</color>
+    <color name="sbc_header_text">#ff808080</color>
+    <color name="sbc_header_view">#ffffffff</color>
+    <color name="sbc_list_item">#fffff0e0</color>
+    <color name="sbc_layout_view">#ffffffff</color>
+    <color name="sbc_page_number_text">#ff000000</color>
+    <color name="sbc_snippet_text">#ff4b4b4b</color>
+    <color name="share_text">#ff000000</color>
+    <color name="share_bg">#4f000000</color>
+    <color name="share_view">#ffffffff</color>
+    <color name="status_view">#50000000</color>
+    <color name="status_text">#ffffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="viewfinder_frame">#ffff7802</color>
+    <color name="viewfinder_laser">#ffff0000</color>
+    <color name="viewfinder_mask">#60000000</color>
+
+    <color name="list_divider_color">#dcdce4</color>
+    <color name="list_text_color">#3c3c46</color>
+    <color name="content_text_color">#4a4a4a</color>
+    <color name="list_name_text_color">#33333d</color>
+    <color name="list_summary_text_color">#9999a3</color>
+    <color name="list_summary_text">#545454</color>
+    <color name="list_select_color">#404040</color>
+
+    <color name="font_black_0">#000000</color>
+    <color name="font_black_content">#ff222222</color>
+    <color name="font_black_2">#ff333333</color>
+    <color name="font_black_content_disabled">#ffcacaca</color>
+    <color name="font_black_comment">#ff666666</color>
+    <color name="font_black_6">#ff666666</color>
+    <color name="font_black_9">#999999</color>
+    <color name="font_white">#ffffffff</color>
+    <color name="font_white_disable">#7fffffff</color>
+
+    <color name="radio_button_selected_color">#ff000000</color>
+    <color name="radio_button_unselected_color">#fff</color>
+    <color name="radio_stroke_color">#000</color>
+    <color name="blue_666e8a">#666e8a</color>
+    <color name="caption_share_background">#f00000</color>
+
+    <drawable name="blue_666e8a">#666e8a</drawable>
+    <drawable name="transparent">#00000000</drawable>
+
+    <color name="emoji_line">#ffcbc9ca</color>
+    <color name="progress_background_light">#FFFAFAFA</color>
+    <color name="background_light">#FAFAFA</color>
+
+
+    <color name="line_color_run_speed_1">#8acb04</color>
+    <color name="line_color_run_speed_3">#4aa657</color>
+    <color name="line_color_run_speed_5">#f3fa07</color>
+    <color name="line_color_run_speed_7">#ffbf05</color>
+    <color name="line_color_run_speed_9">#ff944b</color>
+    <color name="line_color_run_speed_11">#ff6d58</color>
+    <color name="line_color_run_speed_13">#ff2942</color>
+    <color name="line_color_run_speed_15">#e10c05</color>
+    <color name="line_color_run_speed_17">#a5110a</color>
+    <color name="line_color_run_speed_19">#6d0409</color>
+
+    <color name="custom_imoocstyle">#eb4f38</color>
+
+    <color name="view_color">#d8d9e2</color>
+    <color name="view_vertical_color">#e6e5eb</color>
+
+    <color name="text_enabled">#FFFF8414</color>
+    <color name="text_disabled">#60000000</color>
+
+    <color name="wheel_timebtn_nor">#2E78FA</color>
+    <color name="wheel_timebtn_pre">#54a3fa</color>
+
+    <color name="image_item_background">#ffffffff</color>
+    <color name="image_item_unselected_indicator">#fff4f4f4</color>
+    <color name="image_item_selected_indicator">#ffff7800</color>
+</resources>

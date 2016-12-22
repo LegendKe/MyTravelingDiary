@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center|left"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/tv_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="@string/mine_security_level"
+            android:textColor="@color/selector_bg_option"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_number"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginRight="4dp"
+        android:gravity="center"
+        android:textColor="@color/gray_lighter"
+        android:textSize="13sp"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rl_num_bg"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_gravity="center"
+        android:layout_marginRight="4dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_num_bg"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:background="@drawable/shape_friend_message_bg"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:textColor="@color/red_cancle"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_message_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="1"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="11sp" />
+
+    </RelativeLayout>
+
+    <com.ruihai.iconicfontengine.widget.IconicFontTextView
+        android:id="@+id/tv_change"
+        android:layout_width="20dp"
+        android:layout_height="match_parent"
+        android:layout_marginRight="12dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="{xk-set-back}"
+        android:textColor="@color/gray_lighter"
+        android:textSize="24sp"
+        android:visibility="gone" />
+
+</LinearLayout>

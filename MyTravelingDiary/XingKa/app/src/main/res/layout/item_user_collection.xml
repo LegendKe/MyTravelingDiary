@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="105dp"
+        android:layout_height="105dp">
+
+        <ImageView
+            android:id="@+id/iv_cover"
+            android:layout_width="105dp"
+            android:layout_height="105dp" />
+
+        <RelativeLayout
+            android:layout_width="45dp"
+            android:layout_height="22dp"
+            android:layout_gravity="bottom|right"
+            android:background="@drawable/bg_collection"
+            android:orientation="horizontal">
+
+            <com.ruihai.iconicfontengine.widget.IconicFontTextView
+                android:id="@+id/tv_collection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/padding_5"
+                android:text="{xk-collection}"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/tv_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="3"
+                android:layout_alignBottom="@id/tv_collection"
+                android:layout_toRightOf="@id/tv_collection"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_alignParentRight="true"
+                android:textSize="16sp"/>
+
+        </RelativeLayout>
+    </FrameLayout>
+
+</LinearLayout>

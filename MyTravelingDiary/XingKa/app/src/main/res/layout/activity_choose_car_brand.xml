@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:progressLayout="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- <include layout="@layout/common_toolbar_edittext" /> -->
+    <include layout="@layout/common_toolbar_text" />
+
+    <com.ruihai.xingka.widget.ProgressLayout
+        android:id="@+id/progress_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        progressLayout:progressEmptyStateBackgroundColor="#fbc02d"
+        progressLayout:progressEmptyStateContentTextColor="#FFFFFF"
+        progressLayout:progressEmptyStateTitleTextColor="#FFFFFF"
+        progressLayout:progressErrorStateBackgroundColor="#42a5f5"
+        progressLayout:progressErrorStateButtonTextColor="#FFFFFF"
+        progressLayout:progressErrorStateContentTextColor="#FFFFFF"
+        progressLayout:progressErrorStateTitleTextColor="#FFFFFF"
+        progressLayout:progressLoadingStateBackgroundColor="#FFFFFF">
+
+        <LinearLayout
+            android:id="@+id/letter_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.0dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="7.5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="@string/caption_brand_letter_A_Z"
+                android:textColor="@color/orange"
+                android:textSize="@dimen/text_size_normal" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_catalog"
+                android:layout_width="match_parent"
+                android:layout_height="108.0dp" />
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/letter_layout" />
+
+    </com.ruihai.xingka.widget.ProgressLayout>
+
+</LinearLayout>

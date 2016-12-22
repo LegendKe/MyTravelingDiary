@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/view1"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@color/white"/>
+
+        <View
+            android:id="@+id/view0"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@color/white"/>
+
+        <TextView
+            android:id="@+id/show_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:text="正在搜索..."
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/gray_color"
+            android:textSize="16sp" />
+        <View
+            android:id="@+id/view"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:background="@color/white"/>
+
+        <TextView
+            android:visibility="visible"
+            android:id="@+id/show_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:paddingBottom="5dp"
+            android:layout_marginLeft="20dp"
+            android:text="1111"
+            android:textColor="@color/gray_color"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</LinearLayout>

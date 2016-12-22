@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center|left"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal">
+
+        <!-- avatar -->
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sdv_avatar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:clickable="true"
+            fresco:placeholderImage="@mipmap/default_avatar"
+            fresco:roundAsCircle="true"
+            fresco:roundingBorderColor="@color/white"
+            fresco:roundingBorderWidth="0dp" />
+
+        <com.ruihai.iconicfontengine.widget.IconicFontTextView
+            android:id="@+id/tv_message"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_marginLeft="10dp"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="{xk-message}"
+            android:textColor="@color/orange"
+            android:textSize="22sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="@string/mine_security_level"
+                android:textColor="@color/selector_bg_option"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/message"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="你好"
+                android:textSize="12sp"
+                android:textColor="@color/gray_lighter"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical|right"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="@color/gray_lighter"
+            android:textSize="13sp"
+            android:text="星期二"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:id="@+id/rl_num_bg"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_gravity="center_vertical|right"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tv_num_bg"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:background="@drawable/shape_friend_message_bg"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:textColor="@color/red_cancle"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_message_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="1"
+                android:layout_centerInParent="true"
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <com.ruihai.iconicfontengine.widget.IconicFontTextView
+        android:id="@+id/tv_change"
+        android:layout_width="20dp"
+        android:layout_height="match_parent"
+        android:layout_marginRight="12dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="{xk-set-back}"
+        android:textColor="@color/gray_lighter"
+        android:textSize="24sp"
+        android:visibility="gone" />
+
+</LinearLayout>

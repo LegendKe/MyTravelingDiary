@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg"
+    android:orientation="vertical">
+
+    <!--顶部toolbar-->
+    <include layout="@layout/common_toolbar_textview" />
+
+
+    <TextView
+        android:id="@+id/tv_scanresult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/padding_15"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="dadxxfdster"
+        android:textColor="@color/list_name_text_color"
+        android:textSize="20sp" />
+
+</LinearLayout>

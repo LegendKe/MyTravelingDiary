@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/common_toolbar_edittext" />
+
+    <!--设置列宽为90dp,这样当我们的numColumns设置为auto_fit时-->
+    <!--Android就会自动计算我们手机屏幕的大小以决定每一行展示几个元素-->
+    <!--android:horizontalSpacing定义列之间的间隔-->
+    <!--android:verticalSpacing定义行之间的间隔-->
+    <!--android:stretchMode设置为columnWidth是意味着根据列宽自动缩放-->
+    <GridView
+        android:id="@+id/gridview"
+        android:background="@color/input_border_gray"
+        android:layout_marginTop="48dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="6"
+        android:stretchMode="columnWidth"
+        android:gravity="center">
+    </GridView>
+
+
+</RelativeLayout>

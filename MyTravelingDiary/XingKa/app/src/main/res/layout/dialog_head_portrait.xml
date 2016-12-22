@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        android:layout_marginBottom="@dimen/padding_15"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/tv_from_carmer"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="拍照"
+            android:textColor="@color/black"
+            android:background="@drawable/bg_rectangular_orange"
+            android:gravity="center"
+            android:textSize="18sp"
+            />
+        <TextView
+            android:id="@+id/tv_from_gallery"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="从图库中获取"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/padding_5"
+            android:background="@drawable/bg_rectangular_orange"
+            android:gravity="center"
+            android:textSize="18sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_cancle"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="取消"
+            android:textColor="@color/black"
+            android:background="@drawable/bg_rectangular_orange"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:textSize="18sp"
+            />
+    </LinearLayout>
+</RelativeLayout>

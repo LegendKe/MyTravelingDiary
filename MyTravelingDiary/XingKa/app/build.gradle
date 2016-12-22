@@ -1,0 +1,122 @@
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+    defaultConfig {
+        applicationId "com.ruihai.xingka"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 48
+        versionName "1.2.1"
+        renderscriptTargetApi 22
+        renderscriptSupportModeEnabled true
+        multiDexEnabled true
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "x86"
+        }
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+    productFlavors {
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+        exclude 'META-INF/maven/com.belerweb/pinyin4j/pom.xml'
+        exclude 'META-INF/maven/com.belerweb/pinyin4j/pom.properties'
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs' // 存放aar的目录地址
+    }
+    mavenCentral()
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:multidex:1.0.1'
+    compile project(':IconicFontEngine')
+    compile project(':library-orm')
+    compile project(':library')
+    compile project(':pulltorefreshlibaray')
+    compile project(':OneSDK')
+    compile project(':uikit')
+    compile name: 'SMSSDK-2.0.2', ext: 'aar'
+    compile 'com.android.support:design:23.+'
+    compile 'com.android.support:support-v4:23.+'
+    compile 'com.android.support:recyclerview-v7:23.+'
+    compile 'com.android.support:cardview-v7:23.+'
+    compile 'com.eowise:recyclerview-stickyheaders:0.5.0@aar'
+    compile 'se.emilsjolander:stickylistheaders:2.7.0'
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.google.code.gson:gson:2.5'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.3.1'
+    compile 'com.squareup.okhttp3:okhttp:3.3.1'
+    compile 'com.squareup.okhttp:okhttp-urlconnection:2.0.0'
+    compile 'com.jakewharton:butterknife:8.3.0'
+    apt 'com.jakewharton:butterknife-compiler:8.3.0'
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    compile 'com.qiniu:happy-dns:0.2.5'
+    compile 'com.qiniu:qiniu-android-sdk:7.2.+'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'cn.bingoogolapple:bga-badgeview:1.0.2@aar'
+    compile 'cn.bingoogolapple:bga-banner:2.0.3@aar'
+    compile 'jp.wasabeef:blurry:2.0.2'
+    compile 'com.facebook.fresco:fresco:0.12.0'
+    compile 'com.facebook.rebound:rebound:0.3.8'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+//    compile 'com.google.android.gms:play-services-vision:9.2.1'
+    compile 'com.github.aryarohit07:glide-facedetection-transformation:0.2.1'
+    compile 'com.commit451:PhotoView:1.2.4'
+    compile 'com.isseiaoki:simplecropview:1.0.13'
+    compile 'com.orhanobut:hawk:1.18'
+    compile 'com.flyco.dialog:FlycoDialog_Lib:1.2.6@aar'
+    compile 'com.flyco.tablayout:FlycoTabLayout_Lib:2.0.0@aar'
+    compile 'com.flyco.banner:FlycoBanner_Lib:2.0.2@aar'
+    compile 'com.skyfishjy.ripplebackground:library:1.0.1'
+    compile 'com.orhanobut:logger:1.11'
+    compile 'ru.noties:scrollable:1.1.3'
+    compile 'de.greenrobot:eventbus:2.4.0'
+    compile 'in.srain.cube:ultra-ptr:1.0.11'
+    compile 'com.melnykov:floatingactionbutton:1.3.0'
+    compile 'com.shizhefei:MVCHelper-Library:1.0.6'
+    compile 'com.belerweb:pinyin4j:2.5.0'
+    compile 'com.jaeger.statusbaruitl:library:1.2.0'
+    compile 'com.jaeger.ninegridimageview:library:1.0.2'
+    //compile 'com.google.android.gms:play-services-appindexing:9.2.1'
+    compile 'top.zibin:Luban:1.0.5' // 图片压缩算
+    testCompile 'junit:junit:4.12'
+    compile files('libs/cosinesdk.jar')
+}

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <com.facebook.drawee.view.SimpleDraweeView xmlns:fresco="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/iv_avatar"
+                android:layout_width="34.0dp"
+                android:layout_height="34.0dp"
+                fresco:backgroundImage="@color/white"
+                fresco:placeholderImage="@mipmap/default_avatar"
+                fresco:placeholderImageScaleType="centerCrop"
+                fresco:roundAsCircle="true"
+                fresco:roundedCornerRadius="5dp"
+                fresco:roundingBorderColor="#e8e7ec"
+                fresco:roundingBorderWidth="0px" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:text="Medium Text"
+                android:textColor="@color/list_name_text_color"
+                android:textSize="@dimen/text_size_xsmall" />
+
+            <CheckBox
+                android:id="@+id/cb_selected"
+                style="@style/SquareCheckBoxTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divide_line1"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/gray_light"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/divide_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="@dimen/padding_12"
+            android:layout_marginRight="@dimen/padding_12"
+            android:background="@color/divide_line"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</FrameLayout>

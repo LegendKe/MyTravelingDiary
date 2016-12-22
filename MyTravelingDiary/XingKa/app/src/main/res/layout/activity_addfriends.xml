@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <!--<include layout="@layout/common_toolbar_edittext_text"/>-->
+    <include layout="@layout/common_toolbar_textview"/>
+
+    <TextView
+        android:id="@+id/tv_search_key"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_search_bg"
+        android:drawablePadding="4dp"
+        android:drawableLeft="@mipmap/icon_search"
+        android:hint="行咖号/昵称"
+        android:textColorHint="@color/gray_lighter"
+        android:inputType="text"
+        android:paddingLeft="6dp"
+        android:gravity="center_vertical"
+        android:paddingRight="12dp"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:id="@+id/ll_qr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_xingka_numbername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:gravity="center"
+            android:text="我的行咖号: "
+            android:textColor="@color/gray_text_color"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_xingka_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/gray_text_color"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/iv_picture_tips"
+            android:layout_width="12.0dp"
+            android:layout_height="12.0dp"
+            android:layout_marginLeft="5dp"
+            android:src="@mipmap/icon_qrcode"/>
+
+    </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/lv_addfriend_first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:background="@color/white"
+        android:divider="@color/gray_light"
+        android:dividerHeight="1px"
+        android:listSelector="@android:color/transparent"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_light"/>
+
+    <ListView
+        android:visibility="visible"
+        android:layout_marginTop="10dp"
+        android:id="@+id/lv_addfriend_second"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:divider="@color/gray_light"
+        android:dividerHeight="1px"
+        android:listSelector="@android:color/transparent"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_light"/>
+
+    <ListView
+        android:layout_marginTop="10dp"
+        android:id="@+id/lv_addfriend_third"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:divider="@color/gray_light"
+        android:dividerHeight="1px"
+        android:listSelector="@android:color/transparent"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_light"/>
+
+    <ListView
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:id="@+id/lv_addfriend_fouth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:divider="@color/gray_light"
+        android:dividerHeight="1px"
+        android:listSelector="@android:color/transparent"/>
+
+</LinearLayout>

@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10.0dp"
+        android:background="@color/common_bg" />
+
+    <!-- 用户信息 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_10">
+
+        <FrameLayout
+            android:id="@+id/iv_logo"
+            android:layout_width="39.0dp"
+            android:layout_height="39.0dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="0dp"
+            android:background="@mipmap/login_avatar_bg">
+            <!-- avatar -->
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/sdv_avatar"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center"
+                android:background="@color/photopicker_common_primary"
+                android:clickable="true"
+                fresco:placeholderImage="@mipmap/default_avatar"
+                fresco:roundAsCircle="true"
+                fresco:roundWithOverlayColor="@color/white"
+                fresco:roundingBorderColor="@color/white"
+                fresco:roundingBorderWidth="0dp" />
+            <!-- sex -->
+            <ImageView
+                android:id="@+id/iv_sex"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_gravity="center|bottom" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:textColor="@color/font_black_2"
+                    android:textSize="@dimen/text_size_xsmall" />
+
+                <TextView
+                    android:id="@+id/tv_officalaccount"
+                    android:layout_width="42dp"
+                    android:layout_height="14dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/tv_username"
+                    android:background="@drawable/bg_offical_account"
+                    android:gravity="center"
+                    android:text="官方账号"
+                    android:textColor="@color/white"
+                    android:textSize="8sp"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tv_aftertime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:text="@string/app_name"
+                android:textColor="#9798a0"
+                android:textSize="@dimen/text_size_xxxxsmall" />
+
+        </LinearLayout>
+
+        <com.ruihai.iconicfontengine.widget.IconicFontTextView
+            android:id="@+id/btn_add_follow"
+            android:layout_width="44dip"
+            android:layout_height="20dp"
+            android:background="@drawable/selector_follow_btn_bg"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/caption_add_follow"
+            android:textColor="@color/selector_follow_btn_text"
+            android:textSize="@dimen/text_size_xxxxsmall" />
+
+    </LinearLayout>
+
+    <!--主题-->
+    <TextView
+        android:id="@+id/trackway_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:textColor="@color/content_text_color"
+        android:textSize="@dimen/text_size_xsmall" />
+
+    <!--出发时间-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp">
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:paddingRight="5dp"
+            android:src="@mipmap/icon_calendar" />
+
+        <TextView
+            android:id="@+id/trackway_time_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/content_text_color"
+            android:textSize="@dimen/text_size_xsmall" />
+
+    </LinearLayout>
+
+    <!--路线-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp">
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:paddingRight="5dp"
+            android:src="@mipmap/icon_route" />
+
+        <TextView
+            android:id="@+id/trackway_line_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#af7e20"
+            android:textSize="@dimen/text_size_xsmall" />
+
+    </LinearLayout>
+
+
+    <!--旅拼描述-->
+    <LinearLayout
+        android:id="@+id/describe_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/describe_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_pressed_bg_gray"
+            android:lineSpacingExtra="3.5dp"
+            android:padding="10dp"
+            android:text="旅拼描述:"
+            android:textColor="@color/content_text_color"
+            android:textSize="@dimen/text_size_xsmall" />
+
+        <ImageView
+            android:id="@+id/btn_content_more"
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:src="@mipmap/icon_content_down"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+
+    <!--&lt;!&ndash;旅伴要求&ndash;&gt;-->
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:paddingLeft="10dp"-->
+    <!--android:paddingRight="10dp"-->
+    <!--android:paddingTop="5dp">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/partner_require_text"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="旅伴要求:"-->
+    <!--android:textColor="@color/orange"-->
+    <!--android:textSize="@dimen/text_size_xsmall" />-->
+
+    <!--</LinearLayout>-->
+
+    <!--&lt;!&ndash;费用&ndash;&gt;-->
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="10dp"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:paddingLeft="10dp"-->
+    <!--android:paddingRight="10dp">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/cost_text"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="费用:"-->
+    <!--android:textColor="@color/orange"-->
+    <!--android:textSize="@dimen/text_size_xsmall" />-->
+
+    <!--&lt;!&ndash;人数&ndash;&gt;-->
+    <!--<TextView-->
+    <!--android:id="@+id/number_people_text"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="120dp"-->
+    <!--android:text="人数:"-->
+    <!--android:textColor="@color/orange"-->
+    <!--android:textSize="@dimen/text_size_xsmall" />-->
+
+    <!--</LinearLayout>-->
+
+    <!--listview-->
+    <LinearLayout
+        android:id="@+id/swipeview_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-30dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <com.ruihai.xingka.widget.HorizontalListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:background="@color/transparent" />
+
+    </LinearLayout>
+
+
+    <!-- 操作按钮 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_praise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingRight="20dp">
+
+            <com.ruihai.iconicfontengine.widget.IconicFontTextView
+                android:id="@+id/ifb_praise"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:background="@null"
+                android:clickable="false"
+                android:gravity="center"
+                android:text="{xk-praise}"
+                android:textColor="@color/selector_caption_btn_text"
+                android:textSize="24sp" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_collect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/ll_praise"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <com.ruihai.iconicfontengine.widget.IconicFontTextView
+                android:id="@+id/ifb_collect"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:background="@null"
+                android:clickable="false"
+                android:gravity="center"
+                android:text="{xk-collect}"
+                android:textColor="@color/selector_caption_btn_text"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/ll_collect"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <com.ruihai.iconicfontengine.widget.IconicFontTextView
+                android:id="@+id/ifb_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:background="@null"
+                android:clickable="false"
+                android:gravity="center"
+                android:text="{xk-comment}"
+                android:textColor="@color/selector_caption_btn_text"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp">
+
+            <com.ruihai.iconicfontengine.widget.IconicFontTextView
+                android:id="@+id/ifb_share"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:background="@null"
+                android:clickable="false"
+                android:gravity="center"
+                android:text="{xk-share}"
+                android:textColor="@color/selector_caption_btn_text"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/divider_praise"
+        android:layout_width="match_parent"
+        android:layout_height="1.0px"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/view_color" />
+    <!-- 点赞头像 -->
+    <LinearLayout
+        android:id="@+id/layout_praise"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/padding_10"
+        android:paddingRight="@dimen/padding_10">
+
+        <com.ruihai.iconicfontengine.widget.IconicFontTextView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:text="{xk-praise}"
+            android:textColor="@color/orange" />
+
+        <TextView
+            android:id="@+id/text_praise_count"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="-8dp"
+            android:layout_marginRight="8dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/gray_text_color"
+            android:textSize="13sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/layout_praise_users"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_light"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/common_bg"
+        android:visibility="gone" />
+
+
+    <!--<TextView-->
+        <!--android:id="@+id/tv_more"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:background="@drawable/shape_caption_more_comments_bg"-->
+        <!--android:paddingBottom="2dp"-->
+        <!--android:paddingLeft="@dimen/padding_10"-->
+        <!--android:paddingRight="@dimen/padding_10"-->
+        <!--android:paddingTop="2dp"-->
+        <!--android:text="@string/caption_update_comments"-->
+        <!--android:textColor="@color/white"-->
+        <!--android:textSize="12sp"-->
+        <!--android:visibility="gone" />-->
+
+
+</LinearLayout>

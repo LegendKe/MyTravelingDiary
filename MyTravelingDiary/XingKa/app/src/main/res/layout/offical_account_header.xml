@@ -1,0 +1,104 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/user_info_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 头像&Logo显示 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="52dp"
+            android:gravity="center">
+
+            <FrameLayout
+                android:id="@+id/iv_logo"
+                android:layout_width="69.0dp"
+                android:layout_height="69.0dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginBottom="0dp"
+                android:layout_marginTop="10dp"
+                android:background="@mipmap/login_avatar_bg">
+                <!-- avatar -->
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/sdv_avatar"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    fresco:placeholderImage="@mipmap/default_avatar"
+                    fresco:roundAsCircle="true"
+                    fresco:roundingBorderColor="@color/white"
+                    fresco:roundingBorderWidth="0dp" />
+                <!-- sex -->
+                <ImageView
+                    android:id="@+id/iv_sex"
+                    android:layout_width="@dimen/gender_identity_size"
+                    android:layout_height="@dimen/gender_identity_size"
+                    android:layout_gravity="center|bottom" />
+            </FrameLayout>
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="5dp"
+                android:src="@mipmap/icon_offical" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.ruihai.xingka.widget.HorizontalListView
+            android:id="@+id/horizontal_listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/white" />
+    </LinearLayout>
+
+</RelativeLayout>
+

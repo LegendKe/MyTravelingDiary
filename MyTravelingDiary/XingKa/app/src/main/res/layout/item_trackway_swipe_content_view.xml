@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingLeft="10dp">
+
+    <!--<ImageView-->
+        <!--android:id="@+id/iv_image"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="180dp"-->
+        <!--android:background="@color/gray_light"-->
+        <!--android:gravity="center"-->
+        <!--android:scaleType="centerCrop" />-->
+
+    <!--<com.makeramen.roundedimageview.RoundedImageView-->
+        <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+        <!--android:id="@+id/iv_image1"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginBottom="0dp"-->
+        <!--android:scaleType="centerCrop"-->
+        <!--app:riv_border_color="#333333"-->
+        <!--app:riv_border_width="0px"-->
+        <!--app:riv_corner_radius="5dip"-->
+        <!--app:riv_mutate_background="true"-->
+        <!--app:riv_oval="false"-->
+        <!--app:riv_tile_mode="repeat" />-->
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        xmlns:fresco="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/iv_image1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:scaleType="centerCrop"
+        android:background="@color/photopicker_common_primary"
+        fresco:placeholderImage="@mipmap/default_loading_logo"
+        fresco:roundAsCircle="false"
+        fresco:roundedCornerRadius="5dip" />
+
+    <View
+        android:id="@+id/view_right"
+        android:layout_width="10dp"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:visibility="gone"/>
+
+
+
+</LinearLayout>

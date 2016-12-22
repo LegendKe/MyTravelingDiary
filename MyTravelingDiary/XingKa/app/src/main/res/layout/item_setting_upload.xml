@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:gravity="center_vertical"
+    android:layout_height="50dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|left"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="4dp"
+            android:layout_height="16dp"
+            android:src="@drawable/selector_set_btn" />
+
+        <TextView
+            android:id="@+id/tv_state"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:text="@string/mine_account_security"
+            android:textSize="15sp"
+            android:textColor="@color/selector_bg_option" />
+
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/iv_checked"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/checkbox_round_checked"/>
+
+    </LinearLayout>
+
+</LinearLayout>

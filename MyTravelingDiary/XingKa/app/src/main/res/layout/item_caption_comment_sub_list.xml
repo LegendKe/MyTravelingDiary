@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?><!--子评论Item-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/padding_10"
+    android:paddingRight="@dimen/padding_10">
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="40dp"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:background="@color/background_light">-->
+
+    <!--<com.ruihai.xingka.widget.CommentTextView-->
+    <!--android:id="@+id/tv_sub_comment"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:paddingTop="2dp"-->
+    <!--android:paddingBottom="2dp"-->
+    <!--android:paddingLeft="5dp"-->
+    <!--android:background="@color/background_light"-->
+    <!--android:clickable="true"-->
+    <!--android:textColor="@color/list_name_text_color"-->
+    <!--android:textColorHighlight="@color/transparent"-->
+    <!--android:textSize="@dimen/text_size_xsmall" />-->
+
+    <!--</LinearLayout>-->
+
+    <com.ruihai.xingka.widget.CommentTextView
+        android:id="@+id/tv_sub_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="2dp"
+        android:paddingBottom="2dp"
+        android:background="@drawable/bg_select"
+        android:clickable="true"
+        android:textColor="@color/list_name_text_color"
+        android:textColorHighlight="@color/transparent"
+        android:textSize="@dimen/text_size_xxsmall" />
+
+    <View
+        android:id="@+id/bottom_view"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/white"
+        android:visibility="gone" />
+
+</LinearLayout>

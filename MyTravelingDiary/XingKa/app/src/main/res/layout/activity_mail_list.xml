@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_toolbar_textview" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fastScrollEnabled="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/ll_new_friends"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/newFriend_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="#f2f2f4"
+                    android:gravity="center|left"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="4dp"
+                        android:layout_height="14dp"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/bg_rectangular_orange_2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/mine_new_friend"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <com.ruihai.xingka.widget.ListViewForScrollView
+                    android:id="@+id/lvfs_first"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/newFriend_layout"
+                    android:divider="@color/gray_light"
+                    android:dividerHeight="1px" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/gray_light" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/ll_maybe_konw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_new_friends"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/maybeKnown_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="#f2f2f4"
+                    android:gravity="center|left"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="4dp"
+                        android:layout_height="14dp"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/bg_rectangular_orange_2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/mine_maybe_know"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <com.ruihai.xingka.widget.ListViewForScrollView
+                    android:id="@+id/lvfs_second"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/maybeKnown_layout"
+                    android:divider="@color/gray_light"
+                    android:dividerHeight="1px" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/gray_light" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/ll_invite_friends"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_maybe_konw"
+                android:descendantFocusability="blocksDescendants"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/invite_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="#f2f2f4"
+                    android:gravity="center|left"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="4dp"
+                        android:layout_height="14dp"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/bg_rectangular_orange_2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/mine_invite_friends"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <com.ruihai.xingka.widget.ListViewForScrollView
+                    android:id="@+id/lvfs_third"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/invite_layout"
+                    android:divider="@color/gray_light"
+                    android:dividerHeight="1px" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/gray_light" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

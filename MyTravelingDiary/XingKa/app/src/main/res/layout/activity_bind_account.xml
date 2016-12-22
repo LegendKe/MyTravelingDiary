@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ruihai.xingka.widget.SoftKeyboardHandledLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <!-- 顶部Toolbar -->
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="48.0dp"
+        android:background="@color/list_text_color"
+        android:gravity="center_vertical">
+
+        <com.ruihai.iconicfontengine.widget.IconicFontTextView
+            android:id="@+id/tv_back"
+            android:layout_width="@dimen/toolbar_icon_width"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:clickable="true"
+            android:gravity="center_vertical|left"
+            android:text="{xk-back}"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center|center_vertical"
+            android:layout_weight="1"
+            android:text="@string/account_bind"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <!-- 头像&Logo显示 -->
+    <RelativeLayout
+        android:id="@+id/avatar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+
+        <RelativeLayout
+            android:layout_width="99dp"
+            android:layout_height="99dp"
+            android:layout_centerInParent="true"
+            android:background="@mipmap/login_avatar_bg">
+
+            <com.facebook.drawee.view.SimpleDraweeView xmlns:fresco="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/sdv_avatar"
+                android:layout_width="92dp"
+                android:layout_height="92dp"
+                android:layout_centerInParent="true"
+                fresco:placeholderImage="@mipmap/logo_login"
+                fresco:roundAsCircle="true"
+                fresco:roundWithOverlayColor="@null"
+                fresco:roundingBorderColor="@color/white"
+                fresco:roundingBorderWidth="0dp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <!-- 绑定账号表单 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="25dp"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/fl_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_account"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_edittext_login"
+                    android:gravity="left|center_vertical"
+                    android:hint="@string/login_input_account_hint"
+                    android:inputType="phone"
+                    android:paddingLeft="70dp"
+                    android:paddingRight="6dp"
+                    android:textColor="@color/input_text_color"
+                    android:textColorHint="@color/gray_text_color"
+                    android:textSize="12sp" />
+
+                <com.ruihai.iconicfontengine.widget.IconicFontTextView
+                    android:id="@+id/tv_change"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_marginRight="7dp"
+                    android:layout_marginTop="0dp"
+                    android:text="{xk-change}"
+                    android:textColor="@color/input_change"
+                    android:textSize="28sp" />
+
+                <LinearLayout
+                    android:id="@+id/ll_change"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="0dp"
+                    android:orientation="horizontal">
+                    <!-- 国家区码 -->
+                    <TextView
+                        android:id="@+id/tv_num"
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="0dp"
+                        android:gravity="center"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="+86"
+                        android:textColor="@color/blue_ok"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="28dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="6dp"
+                        android:background="@color/view_vertical_color" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fl_account"
+                android:layout_marginTop="15dp">
+
+                <EditText
+                    android:id="@+id/et_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_edittext_login"
+                    android:gravity="left|center_vertical"
+                    android:hint="@string/login_input_password_hint"
+                    android:inputType="textVisiblePassword"
+                    android:paddingLeft="20.0dp"
+                    android:paddingRight="45.0dp"
+                    android:password="true"
+                    android:textColor="@color/input_text_color"
+                    android:textColorHint="@color/gray_text_color"
+                    android:textSize="12sp" />
+
+                <com.ruihai.xingka.widget.SwitchButton
+                    android:id="@+id/checked_show"
+                    android:layout_width="50dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_marginRight="7dp"
+                    android:clickable="true"
+                    android:visibility="visible" />
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/fl_password"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/selector_login_btn_bg"
+                android:gravity="center"
+                android:text="@string/bind"
+                android:textColor="@color/selector_login_btn_text"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+
+</com.ruihai.xingka.widget.SoftKeyboardHandledLinearLayout>

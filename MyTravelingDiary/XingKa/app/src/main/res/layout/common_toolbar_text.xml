@@ -1,0 +1,58 @@
+<!--顶部toolbar-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/toolbar_height"
+    android:background="@color/white"
+    android:layout_alignParentTop="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:background="@color/white">
+
+        <com.ruihai.iconicfontengine.widget.IconicFontTextView
+            android:id="@+id/tv_back"
+            android:layout_width="@dimen/toolbar_icon_width"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|left"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:textSize="24sp"
+            android:text="{xk-back}"
+            android:clickable="true"
+            android:textColor="@color/selector_toolbar_btn_text" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/caption_publish"
+            android:textColor="@color/list_name_text_color"
+            android:singleLine="true"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_right"
+            android:layout_width="48dp"
+            android:layout_height="24dp"
+            android:text="@string/publish"
+            android:textSize="12sp"
+            android:textColor="@color/selector_toolbar_btn_text"
+            android:gravity="center"
+            android:background="@drawable/select_complete"
+            android:layout_marginRight="10dp"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.0px"
+        android:background="@color/view_color" />
+
+</LinearLayout>

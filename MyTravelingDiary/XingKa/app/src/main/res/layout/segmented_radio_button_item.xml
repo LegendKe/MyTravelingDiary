@@ -1,0 +1,6 @@
+<RadioButton
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/SegmentedRadioButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/segmented_radio_shape" />

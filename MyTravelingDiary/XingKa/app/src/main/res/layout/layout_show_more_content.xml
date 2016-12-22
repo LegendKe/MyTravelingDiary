@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/share_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:textColor="@color/font_black_0"
+            android:textSize="14sp" />
+
+        <ScrollView
+            android:id="@+id/content_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/title_tv"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:scrollbars="none">
+
+            <TextView
+                android:id="@+id/content_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#57575c"
+                android:lineSpacingExtra="2dp"
+                android:lineSpacingMultiplier="1.2" />
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/content_scrollview"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:gravity="center">
+
+            <com.ruihai.iconicfontengine.widget.IconicFontTextView
+                android:id="@+id/back_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_content_more"
+                android:padding="2dp"
+                android:text="{xk-close}"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

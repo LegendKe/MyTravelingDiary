@@ -1,0 +1,45 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_toolbar_textview" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#f2f2f4"
+        android:gravity="center">
+
+        <com.ruihai.xingka.widget.ClearableEditText
+            android:id="@+id/et_search_key"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/search_edittext_bg"
+            android:drawablePadding="12dp"
+            android:drawableRight="@mipmap/ic_action_clear"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:paddingLeft="10dp"
+            android:paddingRight="4dp"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+
+    <com.ruihai.xingka.widget.PullListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/show_address"
+        android:layout_marginTop="10dp"
+        android:divider="@color/gray_light"
+        android:dividerHeight="1px" />
+
+
+</LinearLayout>

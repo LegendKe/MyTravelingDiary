@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="true"
+    >
+    <item android:drawable="@drawable/signin1" android:duration="100"></item>
+    <item android:drawable="@drawable/signin2" android:duration="100"></item>
+    <item android:drawable="@drawable/signin3" android:duration="100"></item>
+    <item android:drawable="@drawable/signin4" android:duration="100"></item>
+    <item android:drawable="@drawable/signin5" android:duration="100"></item>
+    <item android:drawable="@drawable/signin6" android:duration="100"></item>
+    <item android:drawable="@drawable/signin7" android:duration="100"></item>
+    <item android:drawable="@drawable/signin8" android:duration="100"></item>
+    <item android:drawable="@drawable/signin9" android:duration="100"></item>
+    <item android:drawable="@drawable/signin10" android:duration="100"></item>
+    <item android:drawable="@drawable/signin11" android:duration="100"></item>
+    <item android:drawable="@drawable/signin12" android:duration="100"></item>
+    <item android:drawable="@drawable/signin13" android:duration="100"></item>
+    <item android:drawable="@drawable/signin14" android:duration="100"></item>
+    <item android:drawable="@drawable/signin15" android:duration="100"></item>
+    <item android:drawable="@drawable/signin16" android:duration="100"></item>
+    <item android:drawable="@drawable/signin17" android:duration="100"></item>
+    <item android:drawable="@drawable/signin18" android:duration="100"></item>
+    <item android:drawable="@drawable/signin19" android:duration="100"></item>
+    <item android:drawable="@drawable/signin20" android:duration="100"></item>
+    <item android:drawable="@drawable/signin21" android:duration="100"></item>
+    <item android:drawable="@drawable/signin22" android:duration="100"></item>
+    <item android:drawable="@drawable/signin23" android:duration="100"></item>
+    <item android:drawable="@drawable/signin24" android:duration="100"></item>
+    <item android:drawable="@drawable/signin25" android:duration="100"></item>
+    <item android:drawable="@drawable/signin26" android:duration="100"></item>
+</animation-list>

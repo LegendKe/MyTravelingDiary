@@ -1,0 +1,106 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context="com.ruihai.xingka.ui.caption.CropImageActivity">
+
+    <include layout="@layout/crop_image_toolbar" />
+
+    <com.isseiaoki.simplecropview.CropImageView
+        android:id="@+id/crop_imageview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tab_bar"
+        android:layout_below="@+id/rl_toolbar"
+        android:paddingBottom="@dimen/padding_10"
+        android:paddingTop="@dimen/padding_10"
+        custom:cropMode="ratio_4_3"
+        custom:frameStrokeWeight="1dp"
+        custom:guideShowMode="show_on_touch"
+        custom:guideStrokeWeight="1dp"
+        custom:handleSize="6dp"
+        custom:minFrameSize="20dp"
+        custom:touchPadding="8dp" />
+
+    <LinearLayout
+        android:id="@+id/tab_bar"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <com.ruihai.iconicfontengine.widget.IconicFontTextView
+            android:id="@+id/btn_rotate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="{xk-rotate-90}"
+            android:textColor="@color/selector_caption_edit_bottom_bar_text"
+            android:textSize="36sp" />
+
+        <com.ruihai.iconicfontengine.widget.IconicFontTextView
+            android:id="@+id/btn_4_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center"
+            android:text="{xk-crop-4_3}"
+            android:textColor="@color/selector_caption_crop_image_text"
+            android:textSize="36sp" />
+
+        <com.ruihai.iconicfontengine.widget.IconicFontTextView
+            android:id="@+id/btn_3_4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center"
+            android:text="{xk-crop-3_4}"
+            android:textColor="@color/selector_caption_crop_image_text"
+            android:textSize="36sp" />
+
+        <com.ruihai.iconicfontengine.widget.IconicFontTextView
+            android:id="@+id/btn_1_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center"
+            android:text="{xk-crop-1_1}"
+            android:textColor="@color/selector_caption_crop_image_text"
+            android:textSize="36sp" />
+
+        <com.ruihai.iconicfontengine.widget.IconicFontTextView
+            android:id="@+id/btn_16_9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center"
+            android:text="{xk-crop-16_9}"
+            android:textColor="@color/selector_caption_crop_image_text"
+            android:textSize="36sp" />
+
+        <com.ruihai.iconicfontengine.widget.IconicFontTextView
+            android:id="@+id/btn_9_16"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center"
+            android:text="{xk-crop-9_16}"
+            android:textColor="@color/selector_caption_crop_image_text"
+            android:textSize="36sp" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

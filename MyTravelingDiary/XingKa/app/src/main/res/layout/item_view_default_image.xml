@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/view_image_indicator"
+    android:layout_width="@dimen/image_card_width"
+    android:layout_height="match_parent"
+    android:background="@color/image_item_unselected_indicator"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="1dp"
+        android:background="@color/image_item_background">
+
+        <ImageView
+            android:id="@+id/iv_image_picker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:scaleType="centerCrop" />
+
+    </RelativeLayout>
+</RelativeLayout>

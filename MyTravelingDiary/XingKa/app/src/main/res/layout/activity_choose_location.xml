@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg"
+    android:orientation="vertical"
+    tools:context="com.ruihai.xingka.ui.caption.ChooseLocationActivity">
+
+    <include layout="@layout/common_toolbar_edittext" />
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/common_bg"
+        android:visibility="gone" />
+
+
+    <com.ruihai.xingka.widget.PullListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/show_address"
+        android:layout_marginTop="10dp"
+        android:divider="@color/gray_light"
+        android:dividerHeight="1px" />
+
+
+</LinearLayout>

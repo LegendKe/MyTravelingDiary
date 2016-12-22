@@ -1,0 +1,117 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/photoPagerFragment"
+        android:name="com.ruihai.xingka.ui.common.fragment.ImagePagerFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black" />
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_marginTop="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:layout_gravity="top"
+        android:background="@color/transparent">
+
+        <com.ruihai.iconicfontengine.widget.IconicFontTextView
+            android:id="@+id/tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="{xk-back}"
+            android:textColor="@color/selector_toolbar_btn_text_white"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <com.ruihai.iconicfontengine.widget.IconicFontTextView
+            android:id="@+id/tv_trash"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:text="{xk-trash}"
+            android:textColor="@color/selector_toolbar_btn_text_white"
+            android:textSize="24sp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <com.ruihai.iconicfontengine.widget.IconicFontTextView
+        android:id="@+id/btn_download_pic"
+        android:layout_width="60dip"
+        android:layout_height="26dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_margin="10dp"
+        android:background="@drawable/selector_follow_btn_bg"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="@string/download_pic"
+        android:textColor="@color/selector_follow_btn_text"
+        android:textSize="@dimen/text_size_xxsmall"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/edit_layout"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_gravity="bottom"
+        android:background="@color/transparent"
+        android:gravity="center_vertical"
+        android:visibility="gone">
+
+        <!--android:background="#B248484a"-->
+
+        <com.ruihai.iconicfontengine.widget.IconicFontTextView
+            android:id="@+id/tv_crop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="{xk-crop}"
+            android:visibility="gone"
+            android:textColor="@color/selector_caption_edit_bottom_bar_text"
+            android:textSize="24sp" />
+
+        <com.ruihai.iconicfontengine.widget.IconicFontTextView
+            android:id="@+id/tv_tag"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="{xk-tag}"
+            android:textColor="@color/selector_caption_edit_bottom_bar_text"
+            android:textSize="24sp"
+            android:visibility="gone" />
+
+        <!--<com.ruihai.iconicfontengine.widget.IconicFontTextView-->
+            <!--android:id="@+id/tv_trash1"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:clickable="true"-->
+            <!--android:gravity="center"-->
+            <!--android:text="{xk-trash}"-->
+            <!--android:textColor="@color/selector_caption_edit_bottom_bar_text"-->
+            <!--android:textSize="24sp" />-->
+
+    </LinearLayout>
+
+</FrameLayout>

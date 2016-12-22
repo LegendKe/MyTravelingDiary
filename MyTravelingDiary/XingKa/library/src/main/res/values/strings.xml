@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Library</string>
+
+    <string name="error_title">无法连接网络</string>
+    <string name="error_description">请检查网络连接并重试</string>
+    <string name="reload_message">重试</string>
+</resources>

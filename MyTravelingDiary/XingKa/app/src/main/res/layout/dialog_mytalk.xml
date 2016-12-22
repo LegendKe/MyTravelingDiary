@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:scrollbars="none">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="78dp"
+        android:layout_marginLeft="@dimen/padding_15"
+        android:layout_marginRight="@dimen/padding_15"
+        android:layout_marginTop="10dp">
+
+        <EditText
+            android:id="@+id/et_mytalk"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:background="@drawable/bg_rectangular_orange"
+            android:gravity="top"
+            android:hint="发表说说"
+            android:maxEms="10"
+            android:padding="@dimen/padding_5"
+            android:singleLine="false"
+            android:textColor="@color/gray_dark"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/text_size_small" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_edit_complete"
+        android:layout_width="match_parent"
+        android:layout_height="36.0dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="@dimen/padding_15"
+        android:layout_marginRight="@dimen/padding_15"
+        android:background="@drawable/bg_rectangular_green_5"
+        android:gravity="center"
+        android:text="完成"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+</LinearLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/text_size_normal"
+        android:text="分享到:" />
+
+    <ListView
+        android:id="@+id/di_dialog_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:dividerHeight="@null"
+        android:overScrollMode="never"
+        android:divider="@android:color/transparent"
+        android:background="@android:color/transparent" />
+
+</LinearLayout>

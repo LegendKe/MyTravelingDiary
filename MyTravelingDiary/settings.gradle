@@ -1,0 +1,7 @@
+include ':uikit', ':pulltorefreshlibaray', ':library-orm', ':OneSDK', ':IconicFontEngine', ':library'
+project(':uikit').projectDir = new File('XingKa/uikit')
+project(':pulltorefreshlibaray').projectDir = new File('XingKa/pulltorefreshlibaray')
+project(':library-orm').projectDir = new File('XingKa/library-orm')
+project(':OneSDK').projectDir = new File('XingKa/OneSDK')
+project(':IconicFontEngine').projectDir = new File('XingKa/IconicFontEngine')
+project(':library').projectDir = new File('XingKa/library')

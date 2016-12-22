@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg"
+    android:orientation="vertical">
+
+        <!--com.ruihai.xingka.widget.AppNoScrollerListView-->
+        <!--com.lzy.widget.ExpandListView-->
+
+
+        <com.ruihai.xingka.widget.AppNoScrollerListView
+            android:id="@+id/list1"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:divider="@drawable/list_divider"
+            android:dividerHeight="1px"
+            android:listSelector="@android:color/transparent" />
+
+        <View
+            android:id="@+id/view_first"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:visibility="gone"
+            android:background="@color/gray_light" />
+
+
+        <com.ruihai.xingka.widget.AppNoScrollerListView
+            android:id="@+id/list2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:dividerHeight="1px"
+            android:divider="@drawable/list_divider"
+            android:listSelector="@android:color/transparent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/gray_light" />
+
+        <com.ruihai.xingka.widget.AppNoScrollerListView
+            android:id="@+id/list3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:divider="@drawable/list_divider"
+            android:dividerHeight="1px"
+            android:listSelector="@android:color/transparent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/gray_light" />
+
+        <com.ruihai.xingka.widget.AppNoScrollerListView
+            android:id="@+id/list4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:divider="@drawable/list_divider"
+            android:dividerHeight="1px"
+            android:listSelector="@android:color/transparent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/gray_light" />
+
+        <com.ruihai.xingka.widget.AppNoScrollerListView
+            android:id="@+id/list5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:divider="@drawable/list_divider"
+            android:dividerHeight="1px"
+            android:listSelector="@android:color/transparent" />
+
+
+</LinearLayout>

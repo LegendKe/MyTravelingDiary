@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:id="@+id/slpash_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ImageView
+            android:id="@+id/img_logo"
+            android:layout_width="138dp"
+            android:layout_height="138dp"
+            android:layout_above="@+id/img_font"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:src="@mipmap/splash_logo" />
+
+        <ImageView
+            android:id="@+id/img_font"
+            android:layout_width="380dp"
+            android:layout_height="68dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:src="@mipmap/xk_slogin_black3" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/copyright"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:src="@mipmap/icon_360_logo"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/copyright"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="20dp"
+            android:gravity="center_horizontal"
+            android:text="Copyright © 2015 RUIHAI"
+            android:textColor="@color/gray_text_color"
+            android:textSize="@dimen/text_size_xxxsmall" />
+
+    </RelativeLayout>
+
+    <com.ruihai.android.ui.widget.webview.XKWebContainerView
+        android:id="@+id/webview_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/btn_count_down"
+            android:layout_width="60dp"
+            android:layout_height="32dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="20dp"
+            android:background="@drawable/open_app_skip_btn"
+            android:clickable="true"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+</FrameLayout>
+

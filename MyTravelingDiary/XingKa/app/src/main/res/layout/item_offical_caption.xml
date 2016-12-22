@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/common_gray" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/common_bg">
+
+        <LinearLayout
+            android:id="@+id/ll_lay1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <com.ruihai.xingka.widget.CustomImageView
+                android:id="@+id/iv_one_image"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:background="#f5f5f5"
+                android:clickable="false"
+                android:scaleType="centerCrop" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/data_show_with_white_stoke"
+            android:orientation="vertical"
+            android:padding="1dp">
+
+            <TextView
+                android:id="@+id/tv_month"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/font_black_2"
+                android:textSize="@dimen/text_size_xxxsmall" />
+
+            <TextView
+                android:id="@+id/tv_day"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/data_show_day_shape"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_xxxsmall" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll_lay2"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/ll_lay1"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="6dp">
+
+            <com.ruihai.iconicfontengine.widget.IconicFontTextView
+                android:id="@+id/tv_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="{xk-share}"
+                android:textColor="@color/selector_toolbar_btn_text"
+                android:textSize="18sp" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.ruihai.iconicfontengine.widget.IconicFontTextView
+                    android:id="@+id/tv_eye"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="{xk-eye}"
+                    android:textColor="#9999a3"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:text="100"
+                    android:textColor="#9999a3" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tv_complete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="已经加载完毕"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+
+</LinearLayout>

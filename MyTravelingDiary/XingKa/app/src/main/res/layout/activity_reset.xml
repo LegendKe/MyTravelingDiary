@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ruihai.xingka.widget.SoftKeyboardHandledLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/activity_tab"/>
+
+    <!-- Logo显示 -->
+    <RelativeLayout
+        android:id="@+id/avatar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="180dp">
+
+        <RelativeLayout
+            android:layout_width="99dp"
+            android:layout_height="99dp"
+            android:layout_centerInParent="true"
+            android:background="@mipmap/login_avatar_bg">
+
+            <com.facebook.drawee.view.SimpleDraweeView xmlns:fresco="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/sdv_avatar"
+                android:layout_width="92dp"
+                android:layout_height="92dp"
+                android:layout_centerInParent="true"
+                fresco:placeholderImage="@mipmap/login_logo"
+                fresco:roundAsCircle="true"
+                fresco:roundWithOverlayColor="@null"
+                fresco:roundingBorderColor="@color/white"
+                fresco:roundingBorderWidth="0dp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!-- 密码重置 表单 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="25dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="25dp"
+            android:orientation="vertical">
+
+            <!-- 输入手机号 -->
+            <EditText
+                android:id="@+id/et_phone"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/edittext_unclick_status"
+                android:gravity="left|center_vertical"
+                android:hint="@string/register_please_input_phone_hint"
+                android:paddingLeft="20dp"
+                android:paddingRight="6dp"
+                android:textColorHint="@color/gray_text_color"
+                android:textColor="@color/input_text_color"
+                android:textSize="16sp" />
+
+            <!-- 验证码发送&获取 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_verify_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_unclick_status"
+                    android:gravity="left|center_vertical"
+                    android:hint="请输入验证码"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="6dp"
+                    android:textColorHint="@color/gray_text_color"
+                    android:textColor="@color/input_text_color"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/btn_get_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/login_verification_button"
+                    android:gravity="center"
+                    android:text="立即获取"
+                    android:textColor="#fff"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <!-- 输入新密码 -->
+            <EditText
+                android:id="@+id/et_newPassWord"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/edittext_unclick_status"
+                android:gravity="left|center_vertical"
+                android:hint="@string/please_input_new_password_hint"
+                android:inputType="textPassword"
+                android:paddingLeft="20dp"
+                android:paddingRight="6dp"
+                android:textColorHint="@color/gray_text_color"
+                android:textColor="@color/input_text_color"
+                android:textSize="16sp" />
+
+            <!--注册按钮-->
+            <TextView
+                android:id="@+id/btn_register"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/selector_login_btn_bg"
+                android:gravity="center"
+                android:text="提交"
+                android:textColor="@color/selector_login_btn_text"
+                android:textSize="17sp" />
+
+            <!--联系客服-->
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_base"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="如遇到手机丢失，忘记行账户，账号被盗等问题，请及时与我们取得联系。客服QQ:2015686190"
+                android:textColor="#b4b4bc"
+                android:textSize="@dimen/text_size_xxsmall" />
+
+            <!-- 注册协议 -->
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/ll_base"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/register_bottom_agree"
+                    android:textColor="@color/gray_dark"/>
+
+                <TextView
+                    android:id="@+id/tv_user_agreement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/register_bottom_agreement"
+                    android:textColor="@color/orange"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</com.ruihai.xingka.widget.SoftKeyboardHandledLinearLayout>

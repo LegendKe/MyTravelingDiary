@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:simple="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.ruihai.xingka.widget.SimpleTagImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerInside"
+        android:src="@drawable/default_error"
+        android:background="@color/white"
+        simple:simple_corner_distance="20dp"
+        simple:simple_tag_background_color="#cc000000"
+        simple:simple_tag_enable="true"
+        simple:simple_tag_orientation="right_top"
+        simple:simple_tag_text="02"
+        simple:simple_tag_textColor="@android:color/white"
+        simple:simple_tag_textSize="16sp"
+        simple:simple_tag_width="20dip" />
+
+    <View
+        android:id="@+id/mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#88000000"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/checkmark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="5.5dp"
+        android:layout_marginRight="5.5dp"
+        android:src="@drawable/selector_photopicker_photo_checkbox_bg" />
+
+</FrameLayout>
+
+
+
+
+
+
+
+
+
+
+<!--<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:simple="http://schemas.android.com/apk/res-auto"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:descendantFocusability="blocksDescendants">-->
+
+    <!--&lt;!&ndash;android:descendantFocusability="blocksDescendants"&ndash;&gt;-->
+
+    <!--&lt;!&ndash;<com.ruihai.xingka.widget.SimpleTagImageView&ndash;&gt;-->
+    <!--&lt;!&ndash;android:id="@+id/image"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:scaleType="centerInside"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:src="@drawable/default_error"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:background="@color/white"&ndash;&gt;-->
+    <!--&lt;!&ndash;simple:simple_corner_distance="20dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;simple:simple_tag_background_color="#cc000000"&ndash;&gt;-->
+    <!--&lt;!&ndash;simple:simple_tag_enable="true"&ndash;&gt;-->
+    <!--&lt;!&ndash;simple:simple_tag_orientation="right_top"&ndash;&gt;-->
+    <!--&lt;!&ndash;simple:simple_tag_text="02"&ndash;&gt;-->
+    <!--&lt;!&ndash;simple:simple_tag_textColor="@android:color/white"&ndash;&gt;-->
+    <!--&lt;!&ndash;simple:simple_tag_textSize="16sp"&ndash;&gt;-->
+    <!--&lt;!&ndash;simple:simple_tag_width="20dip" />&ndash;&gt;-->
+
+    <!--<ImageView-->
+        <!--android:id="@+id/image"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="@color/white"-->
+        <!--android:scaleType="centerInside"-->
+        <!--android:src="@drawable/default_error" />-->
+
+    <!--<View-->
+        <!--android:id="@+id/mask"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="#88000000"-->
+        <!--android:visibility="gone" />-->
+
+    <!--<CheckBox-->
+        <!--android:id="@+id/checkmark"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="bottom|right"-->
+        <!--android:layout_marginBottom="5.5dp"-->
+        <!--android:layout_marginRight="5.5dp"-->
+        <!--android:background="@drawable/selector_photopicker_photo_checkbox_bg"-->
+        <!--android:button="@null"-->
+        <!--/>-->
+
+<!--</FrameLayout>-->

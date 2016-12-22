@@ -1,0 +1,78 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:progressLayout="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+     <!--<include layout="@layout/common_toolbar_edittext" /> -->
+    <include layout="@layout/common_toolbar_textview" />
+
+    <com.ruihai.xingka.widget.ProgressLayout
+        android:id="@+id/progress_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        progressLayout:progressEmptyStateBackgroundColor="#fbc02d"
+        progressLayout:progressEmptyStateContentTextColor="#FFFFFF"
+        progressLayout:progressEmptyStateTitleTextColor="#FFFFFF"
+        progressLayout:progressErrorStateBackgroundColor="#42a5f5"
+        progressLayout:progressErrorStateButtonTextColor="#FFFFFF"
+        progressLayout:progressErrorStateContentTextColor="#FFFFFF"
+        progressLayout:progressErrorStateTitleTextColor="#FFFFFF"
+        progressLayout:progressLoadingStateBackgroundColor="#FFFFFF">
+
+        <com.ruihai.xingka.widget.ClearableEditText
+            android:id="@+id/et_search_key"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/shape_search_bg"
+            android:drawablePadding="4dp"
+            android:drawableRight="@mipmap/ic_action_clear"
+            android:imeOptions="actionSearch"
+            android:drawableLeft="@mipmap/icon_search"
+            android:hint="搜索"
+            android:textColorHint="@color/gray_lighter"
+            android:inputType="text"
+            android:paddingLeft="6dp"
+            android:paddingRight="12dp"
+            android:textSize="12sp" />
+
+
+        <com.ruihai.xingka.widget.AppNoScrollerListView
+            android:id="@+id/ans_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:divider="@drawable/list_divider"
+            android:dividerHeight="1px"
+            android:layout_below="@+id/et_search_key"
+            android:listSelector="@android:color/transparent" />
+
+
+        <TextView
+            android:id="@+id/start_group_chat_text"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:text="+ 发起群聊"
+            android:textSize="16sp"
+            android:textColor="@color/result_points"
+            android:background="@color/white"
+            android:gravity="center"
+            android:visibility="gone"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ans_list" />
+
+    </com.ruihai.xingka.widget.ProgressLayout>
+
+</LinearLayout>

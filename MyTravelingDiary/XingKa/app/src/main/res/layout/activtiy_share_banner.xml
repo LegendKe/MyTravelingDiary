@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4f000000"
+    android:gravity="right"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="70dp"
+        android:layout_height="match_parent"
+        android:background="#9A000000"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/mine_recommend"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/iv_wechat"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="35dp"
+            android:src="@mipmap/share_wechat" />
+
+        <ImageView
+            android:id="@+id/iv_friends"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="30dp"
+            android:src="@mipmap/share_friends" />
+
+        <ImageView
+            android:id="@+id/iv_qq"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="30dp"
+            android:src="@mipmap/share_qq" />
+
+        <ImageView
+            android:id="@+id/iv_qzone"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="30dp"
+            android:src="@mipmap/share_qzone" />
+
+        <ImageView
+            android:id="@+id/iv_weibo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="30dp"
+            android:src="@mipmap/share_weibo"
+            android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>

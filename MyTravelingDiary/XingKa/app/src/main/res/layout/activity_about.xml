@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wv="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg"
+    android:orientation="vertical">
+
+    <!--顶部toolbar-->
+    <include layout="@layout/common_toolbar_textview" />
+
+    <com.ruihai.android.ui.widget.webview.XKWebContainerView
+        android:id="@+id/webview_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        wv:app_cache_enabled="true"
+        wv:built_in_zoom_controls="true"
+        wv:display_zoom_controls="false"
+        wv:dom_storage_enabled="true"
+        wv:java_script_enabled="true"
+        wv:load_with_overview_mode="true"
+        wv:use_wide_view_port="true" />
+
+</LinearLayout>

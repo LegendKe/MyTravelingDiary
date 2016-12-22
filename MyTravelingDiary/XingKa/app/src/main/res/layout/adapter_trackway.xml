@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_trackway_info"/>
+
+    <!-- 评论内容 -->
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/layout_comments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="@dimen/padding_10"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp">
+
+        <com.ruihai.iconicfontengine.widget.IconicFontTextView
+            android:id="@+id/tv_more"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="1dp"
+            android:layout_gravity="top"
+            android:paddingLeft="@dimen/padding_10"
+            android:text="{xk-comment}"
+            android:textColor="@color/orange" />
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_more"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="8dp"-->
+            <!--android:background="@drawable/shape_caption_more_comments_bg"-->
+            <!--android:paddingBottom="2dp"-->
+            <!--android:paddingLeft="@dimen/padding_10"-->
+            <!--android:paddingRight="@dimen/padding_10"-->
+            <!--android:paddingTop="2dp"-->
+            <!--android:text="@string/caption_more_comments"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:textSize="12sp" />-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="top"
+            android:paddingLeft="@dimen/padding_8"
+            android:paddingRight="@dimen/padding_10">
+
+            <com.ruihai.xingka.widget.CommentTextView
+                android:id="@+id/tv_comment_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:textColor="@color/list_name_text_color"
+                android:textColorHighlight="@color/transparent"
+                android:textSize="12sp" />
+
+            <com.ruihai.xingka.widget.CommentTextView
+                android:id="@+id/tv_comment_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:textColor="@color/list_name_text_color"
+                android:textColorHighlight="@color/transparent"
+                android:textSize="12sp" />
+
+            <com.ruihai.xingka.widget.CommentTextView
+                android:id="@+id/tv_comment_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:textColor="@color/list_name_text_color"
+                android:textColorHighlight="@color/transparent"
+                android:textSize="12sp" />
+
+            <com.ruihai.xingka.widget.CommentTextView
+                android:id="@+id/tv_comment_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:textColor="@color/list_name_text_color"
+                android:textColorHighlight="@color/transparent"
+                android:textSize="12sp" />
+
+            <com.ruihai.xingka.widget.CommentTextView
+                android:id="@+id/tv_comment_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:textColor="@color/list_name_text_color"
+                android:textColorHighlight="@color/transparent"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.0px"
+        android:background="@color/view_color" />
+
+
+
+</LinearLayout>

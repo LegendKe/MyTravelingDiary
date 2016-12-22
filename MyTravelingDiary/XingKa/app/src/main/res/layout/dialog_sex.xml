@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:text="@string/man"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/bg_rectangular_black"
+            android:textColor="@color/blue"/>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="192dp"
+            android:layout_marginTop="5dp"
+            >
+
+            <com.ruihai.iconicfontengine.widget.IconicFontTextView
+                android:id="@+id/iv_male"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:text="{xk-male}"
+                android:textSize="60sp"
+                android:gravity="center"
+                android:background="@mipmap/login_avatar_bg"
+                android:textColor="@color/blue" />
+
+            <ImageView
+                android:id="@+id/iv_male_choose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_sex_choose"
+                android:layout_gravity="center"/>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:text="@string/woman"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/bg_rectangular_black"
+            android:textColor="@color/red"/>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="192dp"
+            android:layout_marginTop="5dp"
+            >
+
+
+            <com.ruihai.iconicfontengine.widget.IconicFontTextView
+                android:id="@+id/iv_female"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:text="{xk-female}"
+                android:textSize="60sp"
+                android:gravity="center"
+                android:background="@mipmap/login_avatar_bg"
+                android:textColor="@color/red"
+                />
+
+            <ImageView
+                android:id="@+id/iv_female_choose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_sex_choose"
+                android:layout_gravity="center"/>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

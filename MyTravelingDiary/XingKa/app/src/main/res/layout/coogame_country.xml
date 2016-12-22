@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <!--顶部toolbar-->
+    <include layout="@layout/activity_tab" />
+
+    <FrameLayout
+        android:id="@+id/layoutContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:background="@color/white">
+
+        <!--android:background="@mipmap/text_field"-->
+        <EditText
+            android:id="@+id/country_et_search"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:background="@drawable/shap_edittext_search"
+            android:drawableLeft="@mipmap/icon_search"
+            android:drawablePadding="4dp"
+            android:hint="请输入搜索内容"
+            android:gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/country_iv_cleartext"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="0dp"
+            android:paddingRight="6dp"
+            android:src="@mipmap/clear_button"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.0px"
+        android:layout_marginTop="0dp"
+        android:background="@color/view_color" />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="0dp"
+        android:background="@color/common_bg">
+
+        <ListView
+            android:id="@+id/country_lv_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="#000000"
+            android:divider="#e3e3e3"
+            android:dividerHeight="1px"
+            android:fadingEdge="none"
+            android:scrollbars="none"
+            android:scrollingCache="false"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/country_dialog"
+            android:layout_width="80.0dip"
+            android:layout_height="80.0dip"
+            android:layout_gravity="center"
+            android:background="@drawable/show_head_toast_bg"
+            android:gravity="center"
+            android:textColor="#ffffffff"
+            android:textSize="30.0dip"
+            android:visibility="invisible" />
+
+        <!--<com.example.mdb.chosecountry.country.SideBar-->
+            <!--android:id="@+id/country_sidebar"-->
+            <!--android:layout_width="30.0dip"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_gravity="right|center"-->
+            <!--android:layout_marginBottom="5dip" />-->
+    </FrameLayout>
+
+</LinearLayout>
